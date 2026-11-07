@@ -114,31 +114,36 @@
             transform: scaleX(0);
         }
 
-        /* Glassmorphism & High-tech styling */
+        /* Elevated Glassmorphism & High-tech Spacing Aesthetics */
         .glass-panel {
-            background: rgba(13, 17, 23, 0.78);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            background: rgba(11, 15, 23, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.07), 0 20px 40px -15px rgba(0, 0, 0, 0.5);
         }
 
         .glass-panel-elevated {
-            background: rgba(17, 24, 39, 0.88);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            background: rgba(15, 21, 33, 0.85);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
             border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 25px 50px -12px rgba(0, 0, 0, 0.7);
         }
 
         .glass-card-interactive {
-            background: rgba(13, 17, 23, 0.7);
-            backdrop-filter: blur(14px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            background: rgba(13, 18, 28, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .glass-card-interactive:hover {
-            transform: translateY(-4px);
+            transform: translateY(-6px);
             border-color: rgba(99, 102, 241, 0.45);
-            box-shadow: 0 16px 32px -10px rgba(0, 0, 0, 0.5), 0 0 25px -5px rgba(99, 102, 241, 0.2);
+            background: rgba(16, 23, 38, 0.85);
+            box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 24px 48px -12px rgba(0, 0, 0, 0.7), 0 0 32px -4px rgba(99, 102, 241, 0.25);
         }
 
         /* Gradient Text Effects */
@@ -160,14 +165,14 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Circuit & Dot Grid Patterns */
+        /* Circuit & Dot Grid Patterns with Deep Obsidian Space */
         .circuit-grid {
-            background-color: #07090e;
+            background-color: #05070c;
             background-image: 
-                radial-gradient(rgba(99, 102, 241, 0.12) 1.2px, transparent 1.2px),
+                radial-gradient(rgba(99, 102, 241, 0.13) 1.2px, transparent 1.2px),
                 linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
                 linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-            background-size: 28px 28px, 112px 112px, 112px 112px;
+            background-size: 32px 32px, 128px 128px, 128px 128px;
         }
 
         /* Neon Glow Accents */
@@ -218,14 +223,14 @@
     <!-- Scroll Progress Indicator (Accessible & Compliant) -->
     <div id="scroll-progress" aria-hidden="true"></div>
 
-    <!-- Ambient Glow Top Accents -->
-    <div class="fixed top-0 left-1/4 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse-slow"></div>
-    <div class="fixed top-1/3 right-10 w-96 h-96 bg-silicon-cyan/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
-    <div class="fixed bottom-20 left-10 w-80 h-80 bg-silicon-emerald/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <!-- Ambient Glow Accents (Generous Atmospheric Depth) -->
+    <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-brand-600/12 rounded-full blur-[140px] pointer-events-none -z-10 animate-pulse-slow"></div>
+    <div class="fixed top-1/3 right-10 w-[550px] h-[550px] bg-silicon-cyan/10 rounded-full blur-[150px] pointer-events-none -z-10"></div>
+    <div class="fixed bottom-20 left-10 w-[450px] h-[450px] bg-silicon-emerald/8 rounded-full blur-[140px] pointer-events-none -z-10"></div>
 
-    <!-- Fixed Header & Navigation Bar -->
-    <header class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-slate-800/80 transition-all duration-300" id="siteHeader">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <!-- Floating Island Header & Navigation Bar -->
+    <header class="fixed top-0 sm:top-3 left-0 right-0 z-50 transition-all duration-300 px-0 sm:px-4 lg:px-8 pointer-events-none" id="siteHeader">
+        <div class="max-w-7xl mx-auto h-16 px-4 sm:px-6 rounded-none sm:rounded-2xl glass-panel-elevated border-b sm:border border-white/10 shadow-2xl flex items-center justify-between pointer-events-auto backdrop-blur-2xl">
             
             <!-- Brand / Logo -->
             <a href="#hero" class="flex items-center gap-3 group" onclick="playAudioClick()">
@@ -316,18 +321,18 @@
     </header>
 
     <!-- Main Content Body -->
-    <main class="flex-grow pt-16">
+    <main class="flex-grow pt-16 sm:pt-20">
 
-        <!-- HERO SECTION -->
-        <section id="hero" class="relative py-16 sm:py-24 lg:py-28 overflow-hidden border-b border-slate-800/60">
+        <!-- HERO SECTION (Spacious, Elevated & Impactful) -->
+        <section id="hero" class="relative pt-28 pb-24 sm:pt-36 sm:pb-32 lg:pt-44 lg:pb-36 overflow-hidden border-b border-slate-800/60">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
                     
                     <!-- Left Hero Column: Bio, Status & Badges -->
-                    <div class="lg:col-span-7 space-y-6">
+                    <div class="lg:col-span-7 space-y-8">
                         
                         <!-- Open to work badge with glowing beacon -->
-                        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-300 text-xs font-mono font-medium shadow-sm">
+                        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-slate-900/80 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-medium shadow-glow-emerald">
                             <span class="relative flex h-2.5 w-2.5">
                                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                                 <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
@@ -336,66 +341,63 @@
                         </div>
                         
                         <!-- Name & Supercharged Title -->
-                        <div class="space-y-3">
-                            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        <div class="space-y-4">
+                            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.08]">
                                 Ashlesha Manish Pokale
                             </h1>
-                            <div class="font-mono text-base sm:text-xl lg:text-2xl text-slate-300 flex flex-wrap items-center gap-2">
-                                <span class="text-silicon-cyan font-semibold">Semiconductor Devices</span>
-                                <span class="text-slate-600">•</span>
-                                <span class="text-brand-400 font-semibold">FPGA & VHDL</span>
-                                <span class="text-slate-600">•</span>
-                                <span class="text-emerald-400 font-semibold">Embedded Systems</span>
-                                <span class="text-slate-600">•</span>
-                                <span class="text-silicon-amber font-semibold">Industrial Automation</span>
+                            <div class="flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs sm:text-sm font-mono font-semibold">
+                                <span class="px-3.5 py-1.5 rounded-xl bg-silicon-cyan/10 text-silicon-cyan border border-silicon-cyan/25 shadow-sm">Semiconductor Devices</span>
+                                <span class="px-3.5 py-1.5 rounded-xl bg-brand-500/10 text-brand-400 border border-brand-500/25 shadow-sm">FPGA & VHDL RTL</span>
+                                <span class="px-3.5 py-1.5 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/25 shadow-sm">Embedded Systems</span>
+                                <span class="px-3.5 py-1.5 rounded-xl bg-silicon-amber/10 text-silicon-amber border border-silicon-amber/25 shadow-sm">Industrial Automation</span>
                             </div>
                         </div>
                         
                         <!-- Engineering Summary -->
-                        <p class="text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed">
-                            Final-year Electronics & Telecommunication Engineering undergraduate at <strong class="text-white">SVPCET Nagpur</strong>. Specialized in semiconductor device characterization with <strong class="text-silicon-cyan">NGSpice</strong> (WEL Lab, IIT Bombay), digital logic & FSM synthesis with <strong class="text-brand-400">Verilog/VHDL on Xilinx FPGA</strong>, real-time <strong class="text-emerald-400">Edge-AI NPU sensor fusion</strong>, and <strong class="text-silicon-amber">Siemens PLC / SCADA</strong> automation.
+                        <p class="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed font-normal">
+                            Final-year Electronics & Telecommunication Engineering undergraduate at <strong class="text-white font-semibold">SVPCET Nagpur</strong>. Specialized in semiconductor device characterization with <strong class="text-silicon-cyan font-semibold">NGSpice</strong> (WEL Lab, IIT Bombay), digital logic & FSM synthesis with <strong class="text-brand-400 font-semibold">Verilog/VHDL on Xilinx FPGA</strong>, real-time <strong class="text-emerald-400 font-semibold">Edge-AI NPU sensor fusion</strong>, and <strong class="text-silicon-amber font-semibold">Siemens PLC / SCADA</strong> automation.
                         </p>
 
                         <!-- Action Buttons -->
-                        <div class="flex flex-wrap gap-3 pt-2">
-                            <a href="#hardware-lab" class="bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-mono font-semibold px-5 py-3 rounded-xl transition-all shadow-lg shadow-brand-600/30 flex items-center gap-2 text-xs sm:text-sm hover:scale-[1.02]" onclick="playAudioClick()">
-                                <i data-lucide="terminal" class="w-4 h-4 text-silicon-cyan"></i>
+                        <div class="flex flex-wrap gap-4 pt-2">
+                            <a href="#hardware-lab" class="bg-gradient-to-r from-brand-600 via-indigo-600 to-silicon-cyan hover:from-brand-500 hover:to-indigo-500 text-white font-mono font-semibold px-6 py-3.5 rounded-xl transition-all shadow-xl shadow-brand-600/30 flex items-center gap-2.5 text-xs sm:text-sm hover:scale-[1.02]" onclick="playAudioClick()">
+                                <i data-lucide="terminal" class="w-4 h-4 text-cyan-200"></i>
                                 Launch Hardware Lab
                             </a>
-                            <a href="#projects" class="glass-panel hover:bg-slate-800 text-slate-200 border border-slate-700/80 font-mono font-semibold px-5 py-3 rounded-xl transition-all flex items-center gap-2 text-xs sm:text-sm hover:border-silicon-cyan" onclick="playAudioClick()">
+                            <a href="#projects" class="glass-panel hover:bg-slate-800/90 text-slate-200 border border-slate-700/80 font-mono font-semibold px-6 py-3.5 rounded-xl transition-all flex items-center gap-2.5 text-xs sm:text-sm hover:border-silicon-cyan" onclick="playAudioClick()">
                                 <i data-lucide="layers" class="w-4 h-4 text-emerald-400"></i>
                                 Explore 10 Projects
                             </a>
-                            <button onclick="copyEmailToClipboard()" class="glass-panel hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 font-mono px-4 py-3 rounded-xl transition-all flex items-center gap-2 text-xs sm:text-sm" title="Copy Email">
+                            <button onclick="copyEmailToClipboard()" class="glass-panel hover:bg-slate-800/90 text-slate-300 hover:text-white border border-slate-700/80 font-mono px-5 py-3.5 rounded-xl transition-all flex items-center gap-2 text-xs sm:text-sm" title="Copy Email">
                                 <i data-lucide="copy" class="w-4 h-4 text-silicon-amber"></i>
                                 <span>Copy Email</span>
                             </button>
                         </div>
 
-                        <!-- Highlights Grid -->
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-slate-800/80 font-mono">
-                            <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
-                                <div class="text-2xl font-bold text-white">7.70</div>
-                                <div class="text-[11px] text-slate-400 font-sans mt-0.5">B.Tech CGPA (6 sems)</div>
+                        <!-- Highlights Grid (Spacious Executive Metrics) -->
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-slate-800/80 font-mono">
+                            <div class="p-4 sm:p-5 rounded-2xl bg-slate-900/50 border border-white/[0.08] hover:border-brand-500/40 transition-all">
+                                <div class="text-3xl font-extrabold text-white tracking-tight">7.70</div>
+                                <div class="text-xs text-slate-400 font-sans mt-1">B.Tech CGPA (6 sems)</div>
                             </div>
-                            <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
-                                <div class="text-2xl font-bold text-silicon-cyan">IIT Bombay</div>
-                                <div class="text-[11px] text-slate-400 font-sans mt-0.5">WEL Lab (NPTEL)</div>
+                            <div class="p-4 sm:p-5 rounded-2xl bg-slate-900/50 border border-white/[0.08] hover:border-silicon-cyan/40 transition-all">
+                                <div class="text-3xl font-extrabold text-silicon-cyan tracking-tight">IITB</div>
+                                <div class="text-xs text-slate-400 font-sans mt-1">WEL Lab (NPTEL)</div>
                             </div>
-                            <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
-                                <div class="text-2xl font-bold text-emerald-400">10+</div>
-                                <div class="text-[11px] text-slate-400 font-sans mt-0.5">Engineered Systems</div>
+                            <div class="p-4 sm:p-5 rounded-2xl bg-slate-900/50 border border-white/[0.08] hover:border-emerald-500/40 transition-all">
+                                <div class="text-3xl font-extrabold text-emerald-400 tracking-tight">10+</div>
+                                <div class="text-xs text-slate-400 font-sans mt-1">Engineered Systems</div>
                             </div>
-                            <div class="p-3 rounded-xl bg-silicon-amber/10 border border-silicon-amber/30">
-                                <div class="text-2xl font-bold text-silicon-amber">2nd Prize</div>
-                                <div class="text-[11px] text-slate-300 font-sans mt-0.5">₹20K Project Award</div>
+                            <div class="p-4 sm:p-5 rounded-2xl bg-silicon-amber/10 border border-silicon-amber/30 hover:border-silicon-amber/60 transition-all shadow-glow-amber">
+                                <div class="text-3xl font-extrabold text-silicon-amber tracking-tight">2nd</div>
+                                <div class="text-xs text-slate-300 font-sans mt-1">₹20K Project Award</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Right Hero Column: Interactive Silicon Chip & Sequence Simulator Card -->
                     <div class="lg:col-span-5">
-                        <div class="glass-panel-elevated p-6 rounded-2xl border border-slate-700/80 shadow-2xl relative overflow-hidden group">
+                        <div class="glass-panel-elevated p-7 sm:p-8 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden group">
                             
                             <!-- Chip Header with Pinout Aesthetic -->
                             <div class="flex items-center justify-between pb-3 border-b border-slate-800 font-mono text-xs">
@@ -421,31 +423,31 @@
                             </div>
 
                             <!-- Embedded Interactive FSM Quick Tester -->
-                            <div class="mt-5 p-4 rounded-xl bg-slate-900/90 border border-slate-800">
-                                <div class="flex items-center justify-between text-xs font-mono mb-2">
-                                    <span class="flex items-center gap-1.5 font-bold text-slate-200">
+                            <div class="mt-6 p-5 rounded-2xl bg-dark-950/80 border border-white/[0.08]">
+                                <div class="flex items-center justify-between text-xs font-mono mb-3">
+                                    <span class="flex items-center gap-2 font-bold text-slate-200">
                                         <i data-lucide="cpu" class="w-4 h-4 text-silicon-cyan"></i>
                                         Live FSM State
                                     </span>
-                                    <span id="heroFsmStateBadge" class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-bold">
+                                    <span id="heroFsmStateBadge" class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-bold text-xs">
                                         State: S0 (IDLE)
                                     </span>
                                 </div>
 
                                 <!-- Bit Stream Progress Tape -->
-                                <div class="mb-3 p-2 bg-dark-950 rounded-lg border border-slate-800/80 font-mono text-[11px] flex items-center justify-between">
+                                <div class="mb-4 p-3 bg-slate-900/90 rounded-xl border border-slate-800/80 font-mono text-xs flex items-center justify-between">
                                     <span class="text-slate-400">Stream Buffer:</span>
                                     <span id="heroBitstreamBuffer" class="text-silicon-cyan tracking-widest font-bold">...0000</span>
                                 </div>
 
                                 <!-- Clock Bit Buttons -->
-                                <div class="grid grid-cols-2 gap-2 mb-3">
-                                    <button onclick="stepHeroFSM(1)" class="py-2 px-3 bg-brand-600/30 hover:bg-brand-600/50 border border-brand-500/50 rounded-lg text-xs font-mono font-bold text-brand-300 flex items-center justify-center gap-1.5 transition-all active:scale-95">
-                                        <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+                                <div class="grid grid-cols-2 gap-3 mb-4">
+                                    <button onclick="stepHeroFSM(1)" class="py-3 px-4 bg-brand-600/30 hover:bg-brand-600/50 border border-brand-500/50 rounded-xl text-xs font-mono font-bold text-brand-300 flex items-center justify-center gap-2 transition-all active:scale-95 shadow-sm">
+                                        <i data-lucide="arrow-up" class="w-4 h-4"></i>
                                         Clock Bit '1'
                                     </button>
-                                    <button onclick="stepHeroFSM(0)" class="py-2 px-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-xs font-mono font-bold text-silicon-cyan flex items-center justify-center gap-1.5 transition-all active:scale-95">
-                                        <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i>
+                                    <button onclick="stepHeroFSM(0)" class="py-3 px-4 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl text-xs font-mono font-bold text-silicon-cyan flex items-center justify-center gap-2 transition-all active:scale-95 shadow-sm">
+                                        <i data-lucide="arrow-down" class="w-4 h-4"></i>
                                         Clock Bit '0'
                                     </button>
                                 </div>
@@ -467,63 +469,63 @@
             </div>
         </section>
 
-        <!-- PROFESSIONAL SUMMARY & SPECIALIZATION PILLARS -->
-        <section id="about" class="py-16 sm:py-20 border-b border-slate-800/50">
+        <!-- PROFESSIONAL SUMMARY & SPECIALIZATION PILLARS (Spacious & Refined) -->
+        <section id="about" class="py-24 sm:py-32 border-b border-slate-800/50 relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-slate-800 relative overflow-hidden">
-                    <div class="max-w-3xl">
-                        <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-400 mb-2">
+                <div class="glass-panel p-8 sm:p-12 lg:p-14 rounded-3xl border border-white/[0.08] relative overflow-hidden">
+                    <div class="max-w-3xl space-y-4">
+                        <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-400 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/25">
                             <i data-lucide="user-check" class="w-4 h-4"></i>
                             Engineering Focus & Philosophy
                         </div>
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-4">
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
                             Bridging Silicon Physics, Digital RTL & Edge AI Systems
                         </h2>
-                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                            I am a final-year Electronics & Telecommunication Engineering student at <strong class="text-white">St. Vincent Pallotti College of Engineering & Technology, Nagpur</strong>. My core passion lies at the intersection of microscopic semiconductor physics and macroscopic digital hardware realization. From characterizing sub-micron MOSFET transfer and drain curves in <strong class="text-silicon-cyan">NGSpice</strong>, to synthesizing complex FSM architectures on <strong class="text-brand-400">Xilinx FPGAs</strong>, to deploying real-time multi-sensor Edge AI on <strong class="text-emerald-400">ARM NPUs</strong>, I build hardware that is mathematically validated, power-efficient, and engineered for mission-critical reliability.
+                        <p class="text-slate-300 text-base sm:text-lg leading-relaxed pt-2">
+                            I am a final-year Electronics & Telecommunication Engineering student at <strong class="text-white font-semibold">St. Vincent Pallotti College of Engineering & Technology, Nagpur</strong>. My core passion lies at the intersection of microscopic semiconductor physics and macroscopic digital hardware realization. From characterizing sub-micron MOSFET transfer and drain curves in <strong class="text-silicon-cyan font-semibold">NGSpice</strong>, to synthesizing complex FSM architectures on <strong class="text-brand-400 font-semibold">Xilinx FPGAs</strong>, to deploying real-time multi-sensor Edge AI on <strong class="text-emerald-400 font-semibold">ARM NPUs</strong>, I build hardware that is mathematically validated, power-efficient, and engineered for mission-critical reliability.
                         </p>
                     </div>
 
-                    <!-- 4 Engineering Pillars Grid -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
+                    <!-- 4 Engineering Pillars Grid (Spacious Cards) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 pt-10">
                         
-                        <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800/80 hover:border-silicon-cyan/40 transition-all">
-                            <div class="w-9 h-9 rounded-xl bg-silicon-cyan/10 border border-silicon-cyan/30 flex items-center justify-center text-silicon-cyan mb-3">
-                                <i data-lucide="microchip" class="w-5 h-5"></i>
+                        <div class="p-7 rounded-2xl bg-slate-900/60 border border-white/[0.08] hover:border-silicon-cyan/50 hover:-translate-y-1 transition-all space-y-3">
+                            <div class="w-12 h-12 rounded-2xl bg-silicon-cyan/10 border border-silicon-cyan/30 flex items-center justify-center text-silicon-cyan shadow-sm">
+                                <i data-lucide="microchip" class="w-6 h-6"></i>
                             </div>
-                            <h3 class="text-sm font-bold text-white font-mono mb-1">Semiconductors</h3>
-                            <p class="text-xs text-slate-400 leading-relaxed">
+                            <h3 class="text-base font-bold text-white font-mono">Semiconductors</h3>
+                            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
                                 Device characterization, I-V / C-V analysis, MOSFET subthreshold slope, diode physics & NGSpice SPICE simulation at IIT Bombay WEL Lab.
                             </p>
                         </div>
 
-                        <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800/80 hover:border-brand-500/40 transition-all">
-                            <div class="w-9 h-9 rounded-xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-400 mb-3">
-                                <i data-lucide="cpu" class="w-5 h-5"></i>
+                        <div class="p-7 rounded-2xl bg-slate-900/60 border border-white/[0.08] hover:border-brand-500/50 hover:-translate-y-1 transition-all space-y-3">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-400 shadow-sm">
+                                <i data-lucide="cpu" class="w-6 h-6"></i>
                             </div>
-                            <h3 class="text-sm font-bold text-white font-mono mb-1">Digital RTL & FPGA</h3>
-                            <p class="text-xs text-slate-400 leading-relaxed">
+                            <h3 class="text-base font-bold text-white font-mono">Digital RTL & FPGA</h3>
+                            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
                                 VHDL / Verilog HDL modeling, Moore/Mealy FSM design, timing simulation, priority encoders, and synthesis on Xilinx Spartan-3E using ISE 14.7.
                             </p>
                         </div>
 
-                        <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800/80 hover:border-emerald-500/40 transition-all">
-                            <div class="w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-3">
-                                <i data-lucide="bot" class="w-5 h-5"></i>
+                        <div class="p-7 rounded-2xl bg-slate-900/60 border border-white/[0.08] hover:border-emerald-500/50 hover:-translate-y-1 transition-all space-y-3">
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shadow-sm">
+                                <i data-lucide="bot" class="w-6 h-6"></i>
                             </div>
-                            <h3 class="text-sm font-bold text-white font-mono mb-1">Embedded & Edge AI</h3>
-                            <p class="text-xs text-slate-400 leading-relaxed">
+                            <h3 class="text-base font-bold text-white font-mono">Embedded & Edge AI</h3>
+                            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
                                 ARM Cortex-M3 (STM32), ESP32, Radxa SBC with 3-TOPS Vivante NPU, 4K MIPI CSI-2 vision, sensor fusion, ADC motor protection, and LoRa wireless.
                             </p>
                         </div>
 
-                        <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800/80 hover:border-silicon-amber/40 transition-all">
-                            <div class="w-9 h-9 rounded-xl bg-silicon-amber/10 border border-silicon-amber/30 flex items-center justify-center text-silicon-amber mb-3">
-                                <i data-lucide="sliders" class="w-5 h-5"></i>
+                        <div class="p-7 rounded-2xl bg-slate-900/60 border border-white/[0.08] hover:border-silicon-amber/50 hover:-translate-y-1 transition-all space-y-3">
+                            <div class="w-12 h-12 rounded-2xl bg-silicon-amber/10 border border-silicon-amber/30 flex items-center justify-center text-silicon-amber shadow-sm">
+                                <i data-lucide="sliders" class="w-6 h-6"></i>
                             </div>
-                            <h3 class="text-sm font-bold text-white font-mono mb-1">Automation & IIoT</h3>
-                            <p class="text-xs text-slate-400 leading-relaxed">
+                            <h3 class="text-base font-bold text-white font-mono">Automation & IIoT</h3>
+                            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
                                 Siemens TIA Portal PLC programming (LAD, FBD, SFC), SCADA/HMI dashboards, sensor-actuator interfacing trained at Siemens COE, VNIT Nagpur.
                             </p>
                         </div>
@@ -534,102 +536,106 @@
             </div>
         </section>
 
-        <!-- MAJOR CAPSTONE PROJECT SPOTLIGHT: ITMS -->
-        <section id="major-project" class="py-16 sm:py-24 border-b border-slate-800/50 bg-slate-950/70 relative">
+        <!-- MAJOR CAPSTONE PROJECT SPOTLIGHT: ITMS (Spacious Showcase) -->
+        <section id="major-project" class="py-24 sm:py-32 border-b border-slate-800/50 bg-slate-950/80 relative">
+            
+            <!-- Ambient Golden Glow for Capstone Award -->
+            <div class="absolute top-1/4 right-1/4 w-[500px] h-[400px] bg-silicon-amber/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <!-- Section Header with Award Badge -->
-                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-8">
-                    <div>
-                        <div class="inline-flex items-center gap-2 text-silicon-amber font-mono text-xs tracking-widest uppercase mb-2">
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-12 sm:mb-16">
+                    <div class="space-y-2">
+                        <div class="inline-flex items-center gap-2 text-silicon-amber font-mono text-xs tracking-widest uppercase px-3.5 py-1.5 rounded-full bg-silicon-amber/10 border border-silicon-amber/30">
                             <i data-lucide="trophy" class="w-4 h-4"></i>
                             Final Year Major Capstone Project
                         </div>
-                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
                             Indigenous Integrated Railway Track Monitoring System (ITMS)
                         </h2>
-                        <p class="text-slate-400 text-xs sm:text-sm font-mono mt-1">
+                        <p class="text-slate-400 text-sm sm:text-base font-mono">
                             Contactless Edge-AI Multi-Sensor Inspection Architecture for Indian Railways
                         </p>
                     </div>
 
                     <!-- Award Pill -->
-                    <div class="glass-panel border border-silicon-amber/40 bg-silicon-amber/10 px-5 py-3 rounded-2xl flex items-center gap-3 shrink-0 shadow-glow-amber">
-                        <div class="w-10 h-10 rounded-xl bg-silicon-amber/20 flex items-center justify-center text-silicon-amber">
-                            <i data-lucide="award" class="w-6 h-6"></i>
+                    <div class="glass-panel border border-silicon-amber/50 bg-silicon-amber/15 px-6 py-4 rounded-3xl flex items-center gap-4 shrink-0 shadow-glow-amber">
+                        <div class="w-12 h-12 rounded-2xl bg-silicon-amber/25 flex items-center justify-center text-silicon-amber shadow-sm">
+                            <i data-lucide="award" class="w-7 h-7"></i>
                         </div>
                         <div>
                             <div class="text-xs font-bold text-silicon-amber uppercase font-mono tracking-wider">🏆 2nd Prize Winner</div>
-                            <div class="text-sm font-bold text-white">Best Project Award (Core Category)</div>
-                            <div class="text-[11px] font-mono text-slate-300">₹20,000 Cash Prize • R&D Cell SVPCET</div>
+                            <div class="text-base font-bold text-white">Best Project Award (Core Category)</div>
+                            <div class="text-xs font-mono text-slate-300">₹20,000 Cash Prize • R&D Cell SVPCET</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Main Project Grid: Technical Specs & Live Interactive Inspector -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
                     
                     <!-- Left: Problem, Architecture, Specs -->
                     <div class="lg:col-span-7 space-y-6">
                         
-                        <!-- Abstract Card -->
-                        <div class="glass-panel p-6 sm:p-7 rounded-2xl border border-slate-800">
-                            <h3 class="flex items-center gap-2 text-silicon-cyan font-mono font-bold text-sm mb-3">
-                                <i data-lucide="layers" class="w-4 h-4"></i>
+                        <!-- Abstract Card (Spacious Presentation) -->
+                        <div class="glass-panel p-7 sm:p-9 rounded-3xl border border-white/[0.08] space-y-5">
+                            <h3 class="flex items-center gap-2.5 text-silicon-cyan font-mono font-bold text-base">
+                                <i data-lucide="layers" class="w-5 h-5"></i>
                                 Engineering Motivation & Research Innovation
                             </h3>
-                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-5">
-                                Conventional track inspection in Indian Railways relies on manual physical foot-patrolling or exorbitant imported Track Recording Cars (TRC) that require track closure. ITMS introduces an indigenous, contactless multi-sensor edge inspection vehicle powered by an <strong class="text-white">ARM Single Board Computer (Radxa Cubie A7A with 3-TOPS Vivante NPU)</strong> executing real-time Edge-AI defect classification alongside 6-axis IMU vibration telemetry and GPS/LoRa geo-tagged alert dispatch.
+                            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                                Conventional track inspection in Indian Railways relies on manual physical foot-patrolling or exorbitant imported Track Recording Cars (TRC) that require track closure. ITMS introduces an indigenous, contactless multi-sensor edge inspection vehicle powered by an <strong class="text-white font-semibold">ARM Single Board Computer (Radxa Cubie A7A with 3-TOPS Vivante NPU)</strong> executing real-time Edge-AI defect classification alongside 6-axis IMU vibration telemetry and GPS/LoRa geo-tagged alert dispatch.
                             </p>
 
-                            <!-- Metric Cards -->
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono">
-                                <div class="p-3 bg-dark-900 rounded-xl border border-slate-800">
-                                    <span class="text-slate-400 text-[11px] block mb-1">Vision Payload</span>
-                                    <span class="text-white font-bold text-xs">Sony IMX415 4K</span>
-                                    <span class="text-[10px] text-slate-500 block mt-0.5">MIPI CSI-2 Hardware Pipeline</span>
+                            <!-- Metric Cards (Spacious) -->
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 font-mono pt-2">
+                                <div class="p-4 bg-dark-950/90 rounded-2xl border border-white/[0.06] hover:border-silicon-cyan/30 transition-all">
+                                    <span class="text-slate-400 text-xs block mb-1">Vision Payload</span>
+                                    <span class="text-white font-bold text-sm">Sony IMX415 4K</span>
+                                    <span class="text-[11px] text-slate-500 block mt-1">MIPI CSI-2 Hardware Pipeline</span>
                                 </div>
-                                <div class="p-3 bg-dark-900 rounded-xl border border-slate-800">
-                                    <span class="text-slate-400 text-[11px] block mb-1">Edge AI Engine</span>
-                                    <span class="text-white font-bold text-xs">Custom YOLOv8</span>
-                                    <span class="text-[10px] text-slate-500 block mt-0.5">15 Defect Classes Trained</span>
+                                <div class="p-4 bg-dark-950/90 rounded-2xl border border-white/[0.06] hover:border-brand-500/30 transition-all">
+                                    <span class="text-slate-400 text-xs block mb-1">Edge AI Engine</span>
+                                    <span class="text-white font-bold text-sm">Custom YOLOv8</span>
+                                    <span class="text-[11px] text-slate-500 block mt-1">15 Defect Classes Trained</span>
                                 </div>
-                                <div class="p-3 bg-dark-900 rounded-xl border border-slate-800">
-                                    <span class="text-slate-400 text-[11px] block mb-1">Accuracy Metric</span>
-                                    <span class="text-emerald-400 font-bold text-xs">0.867 mAP@0.5</span>
-                                    <span class="text-[10px] text-slate-500 block mt-0.5">0.83 Prec / 0.85 Recall</span>
+                                <div class="p-4 bg-dark-950/90 rounded-2xl border border-white/[0.06] hover:border-emerald-500/30 transition-all">
+                                    <span class="text-slate-400 text-xs block mb-1">Accuracy Metric</span>
+                                    <span class="text-emerald-400 font-bold text-sm">0.867 mAP@0.5</span>
+                                    <span class="text-[11px] text-slate-500 block mt-1">0.83 Prec / 0.85 Recall</span>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 4-Stage Sensor-to-Alert Pipeline -->
-                        <div class="glass-panel p-6 rounded-2xl border border-slate-800">
-                            <h3 class="flex items-center gap-2 text-brand-400 font-mono font-bold text-sm mb-3">
-                                <i data-lucide="git-branch" class="w-4 h-4"></i>
+                        <!-- 4-Stage Sensor-to-Alert Pipeline (Spacious Cards) -->
+                        <div class="glass-panel p-7 sm:p-9 rounded-3xl border border-white/[0.08] space-y-4">
+                            <h3 class="flex items-center gap-2.5 text-brand-400 font-mono font-bold text-base">
+                                <i data-lucide="git-branch" class="w-5 h-5"></i>
                                 Real-time Sensor-to-Cloud Execution Pipeline
                             </h3>
-                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 font-mono text-center text-xs">
-                                <div class="p-3 bg-dark-900 rounded-xl border border-slate-800/80">
-                                    <div class="text-brand-400 font-bold mb-1">1. Acquisition</div>
-                                    <div class="text-[10px] text-slate-300">4K Video + 6-Axis IMU</div>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 font-mono text-center text-xs">
+                                <div class="p-4 bg-dark-950/90 rounded-2xl border border-white/[0.06]">
+                                    <div class="text-brand-400 font-bold mb-1.5 text-xs sm:text-sm">1. Acquisition</div>
+                                    <div class="text-[11px] text-slate-300">4K Video + 6-Axis IMU</div>
                                 </div>
-                                <div class="p-3 bg-dark-900 rounded-xl border border-slate-800/80">
-                                    <div class="text-silicon-cyan font-bold mb-1">2. NPU Inference</div>
-                                    <div class="text-[10px] text-slate-300">3-TOPS Vivante Engine</div>
+                                <div class="p-4 bg-dark-950/90 rounded-2xl border border-white/[0.06]">
+                                    <div class="text-silicon-cyan font-bold mb-1.5 text-xs sm:text-sm">2. NPU Inference</div>
+                                    <div class="text-[11px] text-slate-300">3-TOPS Vivante Engine</div>
                                 </div>
-                                <div class="p-3 bg-dark-900 rounded-xl border border-slate-800/80">
-                                    <div class="text-emerald-400 font-bold mb-1">3. Geo-Tagging</div>
-                                    <div class="text-[10px] text-slate-300">GPS NMEA Telemetry</div>
+                                <div class="p-4 bg-dark-950/90 rounded-2xl border border-white/[0.06]">
+                                    <div class="text-emerald-400 font-bold mb-1.5 text-xs sm:text-sm">3. Geo-Tagging</div>
+                                    <div class="text-[11px] text-slate-300">GPS NMEA Telemetry</div>
                                 </div>
-                                <div class="p-3 bg-dark-900 rounded-xl border border-slate-800/80">
-                                    <div class="text-silicon-amber font-bold mb-1">4. LoRa Station</div>
-                                    <div class="text-[10px] text-slate-300">Sub-GHz Long Range Link</div>
+                                <div class="p-4 bg-dark-950/90 rounded-2xl border border-white/[0.06]">
+                                    <div class="text-silicon-amber font-bold mb-1.5 text-xs sm:text-sm">4. LoRa Station</div>
+                                    <div class="text-[11px] text-slate-300">Sub-GHz Long Range Link</div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Team & Guide Info -->
-                        <div class="glass-panel p-4 rounded-xl border border-slate-800 flex flex-wrap items-center justify-between text-xs font-mono text-slate-300 gap-2">
+                        <div class="glass-panel p-5 sm:p-6 rounded-2xl border border-white/[0.08] flex flex-wrap items-center justify-between text-xs sm:text-sm font-mono text-slate-300 gap-3">
                             <div>
                                 <span class="text-slate-500">Engineered by:</span> 
                                 Vedant Burde, Aryan Choudhari, <strong class="text-brand-400">Ashlesha Pokale</strong>, Vaibhav Varma
@@ -642,73 +648,73 @@
 
                     </div>
 
-                    <!-- Right: LIVE EDGE AI INSPECTOR SIMULATOR (Interactive Web App Feature) -->
+                    <!-- Right: LIVE EDGE AI INSPECTOR SIMULATOR (Spacious Interactive Console) -->
                     <div class="lg:col-span-5">
-                        <div class="glass-panel-elevated p-6 rounded-2xl border border-slate-700/80 shadow-2xl space-y-4">
+                        <div class="glass-panel-elevated p-7 sm:p-8 rounded-3xl border border-white/10 shadow-2xl space-y-6">
                             
-                            <div class="flex items-center justify-between pb-3 border-b border-slate-800 text-xs font-mono">
-                                <div class="flex items-center gap-2">
+                            <div class="flex items-center justify-between pb-3.5 border-b border-slate-800 text-xs sm:text-sm font-mono">
+                                <div class="flex items-center gap-2.5">
                                     <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
                                     <span class="font-bold text-white">Live Edge-AI Telemetry</span>
                                 </div>
-                                <span class="text-[11px] text-silicon-cyan">Vivante NPU: 18.2ms / 55 FPS</span>
+                                <span class="text-xs text-silicon-cyan">Vivante NPU: 18.2ms / 55 FPS</span>
                             </div>
 
-                            <!-- Mock Video / Sensor Screen -->
-                            <div class="relative w-full h-56 bg-dark-950 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between p-3 font-mono">
+                            <!-- Mock Video / Sensor Screen (Spacious Viewport) -->
+                            <div class="relative w-full h-64 sm:h-72 bg-dark-950 rounded-2xl border border-white/[0.08] overflow-hidden flex flex-col justify-between p-4 font-mono shadow-inner">
                                 <!-- Top Camera HUD -->
-                                <div class="flex justify-between items-center text-[10px] text-slate-400 z-10 bg-dark-900/80 px-2 py-1 rounded backdrop-blur-sm">
+                                <div class="flex justify-between items-center text-xs text-slate-400 z-10 bg-dark-900/90 px-3 py-1.5 rounded-xl backdrop-blur-md border border-white/5">
                                     <span>CAM: SONY IMX415 (4K)</span>
-                                    <span id="itmsTimeCode" class="text-silicon-cyan">REC 00:14:28.91</span>
+                                    <span id="itmsTimeCode" class="text-silicon-cyan font-bold">REC 00:14:28.91</span>
                                     <span class="text-emerald-400 font-bold">LIVE TRACK</span>
                                 </div>
 
                                 <!-- Dynamic Visual Bounding Box in Track Inspection -->
                                 <div id="itmsBBoxContainer" class="relative my-auto flex items-center justify-center">
-                                    <div id="itmsDefectBox" class="border-2 border-silicon-amber bg-silicon-amber/10 p-3 rounded-lg text-center transition-all duration-300 w-3/4 max-w-xs shadow-lg">
-                                        <div class="flex items-center justify-between text-[11px] font-bold text-silicon-amber mb-1">
+                                    <div id="itmsDefectBox" class="border-2 border-silicon-amber bg-silicon-amber/15 p-4 rounded-xl text-center transition-all duration-300 w-4/5 max-w-sm shadow-xl backdrop-blur-sm">
+                                        <div class="flex items-center justify-between text-xs font-bold text-silicon-amber mb-1.5">
                                             <span id="itmsDefectTitle">Crack in Rail Head</span>
-                                            <span id="itmsDefectConf" class="px-1.5 py-0.5 rounded bg-silicon-amber/20 text-[10px]">94.2%</span>
+                                            <span id="itmsDefectConf" class="px-2 py-0.5 rounded-md bg-silicon-amber/25 text-[11px] font-mono">94.2%</span>
                                         </div>
-                                        <div id="itmsDefectSeverity" class="text-[10px] text-slate-300 text-left">
+                                        <div id="itmsDefectSeverity" class="text-xs text-slate-300 text-left font-sans">
                                             Severity: Medium | Loc: MP 14/2
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Bottom Overlay Metrics -->
-                                <div class="flex justify-between items-center text-[10px] text-slate-400 z-10 bg-dark-900/80 px-2 py-1 rounded backdrop-blur-sm">
+                                <div class="flex justify-between items-center text-xs text-slate-400 z-10 bg-dark-900/90 px-3 py-1.5 rounded-xl backdrop-blur-md border border-white/5">
                                     <span>GPS: 21.1458° N, 79.0882° E</span>
-                                    <span id="itmsImuAlert" class="text-emerald-400">IMU: Nominal (0.12g)</span>
+                                    <span id="itmsImuAlert" class="text-emerald-400 font-bold">IMU: Nominal (0.12g)</span>
                                 </div>
                             </div>
 
-                            <!-- Live Defect Switcher Buttons -->
-                            <div>
-                                <label class="text-[11px] font-mono text-slate-400 block mb-1.5">Simulate Track Defect Scenario:</label>
-                                <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono">
-                                    <button onclick="setItmsScenario('crack')" class="itms-btn active p-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-left">
+                            <!-- Live Defect Switcher Buttons (Spacious Controls) -->
+                            <div class="space-y-2">
+                                <label class="text-xs font-mono text-slate-400 block font-semibold">Simulate Track Defect Scenario:</label>
+                                <div class="grid grid-cols-2 gap-2.5 sm:gap-3 text-xs font-mono">
+                                    <button onclick="setItmsScenario('crack')" class="itms-btn active p-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-left transition-all">
                                         ⚠️ Rail Crack (94%)
                                     </button>
-                                    <button onclick="setItmsScenario('clip')" class="itms-btn p-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-left">
+                                    <button onclick="setItmsScenario('clip')" class="itms-btn p-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-left transition-all">
                                         🔩 Missing Fastener Clip
                                     </button>
-                                    <button onclick="setItmsScenario('joint')" class="itms-btn p-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-left">
+                                    <button onclick="setItmsScenario('joint')" class="itms-btn p-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-left transition-all">
                                         🚨 Fishplate Gap Fault
                                     </button>
-                                    <button onclick="setItmsScenario('clear')" class="itms-btn p-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-left">
+                                    <button onclick="setItmsScenario('clear')" class="itms-btn p-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-left transition-all">
                                         ✅ Nominal Clear Rail
                                     </button>
                                 </div>
                             </div>
 
                             <!-- Live 6-Axis IMU Vibration Canvas -->
-                            <div class="p-3 bg-dark-950 rounded-xl border border-slate-800">
-                                <div class="flex justify-between items-center text-[10px] font-mono text-slate-400 mb-1">
+                            <div class="p-4 bg-dark-950 rounded-2xl border border-white/[0.08] space-y-2">
+                                <div class="flex justify-between items-center text-xs font-mono text-slate-400">
                                     <span>6-Axis IMU Real-Time Accelerometer Trace (Z-Axis)</span>
-                                    <span class="text-silicon-cyan">Sampling: 200 Hz</span>
+                                    <span class="text-silicon-cyan font-bold">Sampling: 200 Hz</span>
                                 </div>
-                                <canvas id="itmsWaveCanvas" class="w-full h-16 rounded bg-slate-950 block"></canvas>
+                                <canvas id="itmsWaveCanvas" class="w-full h-20 sm:h-24 rounded-xl bg-slate-950 block"></canvas>
                             </div>
 
                         </div>
@@ -718,26 +724,26 @@
             </div>
         </section>
 
-        <!-- INTERACTIVE HARDWARE & SILICON LAB (FLAGSHIP WEB APP FEATURE) -->
-        <section id="hardware-lab" class="py-20 sm:py-24 border-b border-slate-800/50 relative">
+        <!-- INTERACTIVE HARDWARE & SILICON LAB (Spacious & Immersive Workbench) -->
+        <section id="hardware-lab" class="py-24 sm:py-32 border-b border-slate-800/50 relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-400 mb-2">
+                <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16 space-y-3">
+                    <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-400 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/25">
                         <i data-lucide="cpu" class="w-4 h-4 text-silicon-cyan"></i>
                         Interactive Engineering Workbench
                     </div>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
                         Hardware & Semiconductor Simulator Lab
                     </h2>
-                    <p class="mt-2 text-slate-300 text-sm">
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
                         Experience real-time hardware simulation directly in your browser: explore MOSFET device physics, test the VHDL 1011 state machine, and evaluate digital logic.
                     </p>
                 </div>
 
-                <!-- Lab Tabs -->
-                <div class="flex justify-center mb-8">
-                    <div class="glass-panel p-1.5 rounded-2xl border border-slate-800 flex flex-wrap gap-1 font-mono text-xs">
+                <!-- Lab Tabs (Spacious Pill Bar) -->
+                <div class="flex justify-center mb-10">
+                    <div class="glass-panel p-2 rounded-2xl border border-white/10 flex flex-wrap gap-2 font-mono text-xs sm:text-sm">
                         <button onclick="switchLabTab('mosfet')" id="tabBtn-mosfet" class="lab-tab-btn active px-4 py-2 rounded-xl text-white bg-brand-600 font-bold transition-all flex items-center gap-2">
                             <i data-lucide="activity" class="w-4 h-4"></i>
                             <span>MOSFET I-V Simulator (IITB / NGSpice)</span>
@@ -754,7 +760,7 @@
                 </div>
 
                 <!-- TAB 1: MOSFET I-V CURVE SIMULATOR (NGSpice / IIT Bombay) -->
-                <div id="labTab-mosfet" class="glass-panel-elevated p-6 sm:p-8 rounded-3xl border border-slate-800">
+                <div id="labTab-mosfet" class="glass-panel-elevated p-8 sm:p-10 lg:p-12 rounded-3xl border border-white/10 shadow-2xl">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                         
                         <!-- Left: Sliders & Theory -->
@@ -825,7 +831,7 @@
                                     </span>
                                     <span class="text-[11px] text-slate-500">60 FPS Real-time Engine</span>
                                 </div>
-                                <canvas id="mosfetCanvas" width="600" height="350" class="w-full h-80 rounded-xl bg-dark-900 block"></canvas>
+                                <canvas id="mosfetCanvas" width="700" height="380" class="w-full h-80 sm:h-96 rounded-xl bg-dark-900 block"></canvas>
                                 <div class="flex flex-wrap justify-between items-center text-[11px] font-mono text-slate-400 pt-3 px-1">
                                     <span class="flex items-center gap-1.5">
                                         <span class="w-3 h-0.5 bg-silicon-cyan inline-block"></span> Active $V_{GS}$ Curve
@@ -844,7 +850,7 @@
                 </div>
 
                 <!-- TAB 2: 1011 FSM STATE DIAGRAM (FPGA / VHDL) -->
-                <div id="labTab-fsm" class="hidden glass-panel-elevated p-6 sm:p-8 rounded-3xl border border-slate-800">
+                <div id="labTab-fsm" class="hidden glass-panel-elevated p-8 sm:p-10 lg:p-12 rounded-3xl border border-white/10 shadow-2xl">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                         
                         <!-- Left: Visual State Graph -->
@@ -968,7 +974,7 @@
                 </div>
 
                 <!-- TAB 3: INTERACTIVE 4-to-1 MULTIPLEXER (DIGITAL LOGIC) -->
-                <div id="labTab-mux" class="hidden glass-panel-elevated p-6 sm:p-8 rounded-3xl border border-slate-800">
+                <div id="labTab-mux" class="hidden glass-panel-elevated p-8 sm:p-10 lg:p-12 rounded-3xl border border-white/10 shadow-2xl">
                     <div class="max-w-3xl mx-auto space-y-6">
                         <div class="text-center">
                             <span class="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider">Verilog HDL Digital Logic</span>
@@ -1020,21 +1026,21 @@
             </div>
         </section>
 
-        <!-- DYNAMIC FILTERABLE SKILLS MATRIX -->
-        <section id="skills" class="py-20 border-b border-slate-800/50">
+        <!-- DYNAMIC FILTERABLE SKILLS MATRIX (Spacious Toolchain) -->
+        <section id="skills" class="py-24 sm:py-32 border-b border-slate-800/50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
-                    <div>
-                        <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-400 mb-1">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
+                    <div class="space-y-2">
+                        <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-400 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/25">
                             <i data-lucide="cpu" class="w-4 h-4"></i>
                             Comprehensive Toolchain
                         </div>
-                        <h2 class="text-3xl font-extrabold text-white">Technical Skills & Technologies</h2>
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">Technical Skills & Technologies</h2>
                     </div>
 
                     <!-- Category Filter Tabs -->
-                    <div class="flex flex-wrap gap-1.5 font-mono text-xs" id="skillFilterButtons">
+                    <div class="flex flex-wrap gap-2 font-mono text-xs sm:text-sm" id="skillFilterButtons">
                         <button onclick="filterSkills('all')" class="skill-tab active px-3.5 py-1.5 rounded-lg bg-brand-600 text-white font-bold transition-all">All</button>
                         <button onclick="filterSkills('semiconductor')" class="skill-tab px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition-all">Semiconductor & VLSI</button>
                         <button onclick="filterSkills('digital')" class="skill-tab px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition-all">Digital & FPGA</button>
@@ -1045,7 +1051,7 @@
                 </div>
 
                 <!-- Skills Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="skillsGrid">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="skillsGrid">
                     
                     <!-- 1. Semiconductor & Microelectronics -->
                     <div class="skill-card semiconductor glass-card-interactive p-6 rounded-2xl border border-slate-800">
@@ -1175,38 +1181,38 @@
         </section>
 
         <!-- COMPLETE PROJECTS SHOWCASE (10 DETAILED PROJECTS WITH LIVE SEARCH & MODALS) -->
-        <section id="projects" class="py-20 border-b border-slate-800/50">
+        <section id="projects" class="py-24 sm:py-32 border-b border-slate-800/50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="text-center max-w-3xl mx-auto mb-10">
-                    <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-400 mb-1">
+                <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-3">
+                    <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-400 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/25">
                         <i data-lucide="folder-git-2" class="w-4 h-4"></i>
                         Engineering Portfolio
                     </div>
-                    <h2 class="text-3xl font-extrabold text-white">10 Engineered Systems & Research Projects</h2>
-                    <p class="mt-2 text-slate-300 text-sm">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">10 Engineered Systems & Research Projects</h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
                         From silicon device physics and FPGA syntheses to embedded ARM firmware and industrial robotics.
                     </p>
                 </div>
 
-                <!-- Instant Search & Filter Bar -->
-                <div class="glass-panel p-4 rounded-2xl border border-slate-800 mb-10 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div class="relative w-full sm:w-80">
-                        <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-3"></i>
-                        <input type="text" id="projectSearchInput" oninput="filterProjectsBySearch()" placeholder="Search project by keyword (e.g. STM32, FPGA, Verilog, IoT)..." class="w-full bg-dark-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2 text-xs font-mono text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors">
+                <!-- Instant Search & Filter Bar (Spacious Design) -->
+                <div class="glass-panel p-5 sm:p-6 rounded-2xl border border-white/10 mb-12 sm:mb-14 flex flex-col sm:flex-row items-center justify-between gap-5">
+                    <div class="relative w-full sm:w-96">
+                        <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5"></i>
+                        <input type="text" id="projectSearchInput" oninput="filterProjectsBySearch()" placeholder="Search project by keyword (e.g. STM32, FPGA, Verilog, IoT)..." class="w-full bg-dark-950 border border-slate-800 rounded-xl pl-10 pr-4 py-2.5 text-xs sm:text-sm font-mono text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors">
                     </div>
 
-                    <div class="flex items-center justify-between w-full sm:w-auto gap-3 text-xs font-mono">
+                    <div class="flex items-center justify-between w-full sm:w-auto gap-4 text-xs sm:text-sm font-mono">
                         <span id="projectCountBadge" class="text-slate-400">Showing <strong class="text-white">10</strong> of 10 projects</span>
-                        <button onclick="resetProjectFilters()" class="text-brand-400 hover:text-white underline text-[11px]">Show All</button>
+                        <button onclick="resetProjectFilters()" class="text-brand-400 hover:text-white underline text-xs">Show All</button>
                     </div>
                 </div>
 
-                <!-- 10 Projects Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projectsGrid">
+                <!-- 10 Projects Grid (Spacious 3-Column Layout) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsGrid">
 
                     <!-- Project 1: STM32 Motor Protection Relay -->
-                    <div class="project-card glass-card-interactive rounded-2xl p-6 border border-slate-800 flex flex-col justify-between" data-title="Agricultural Motor Protection Relay Using STM32" data-tags="embedded stm32 c adc relay protection cortex">
+                    <div class="project-card glass-card-interactive rounded-3xl p-7 sm:p-8 border border-white/[0.08] flex flex-col justify-between" data-title="Agricultural Motor Protection Relay Using STM32" data-tags="embedded stm32 c adc relay protection cortex">
                         <div>
                             <div class="flex justify-between items-center mb-3">
                                 <span class="px-2.5 py-1 bg-brand-500/10 text-brand-400 border border-brand-500/30 text-[11px] font-mono rounded-full font-semibold">Embedded C / STM32</span>
@@ -1232,7 +1238,7 @@
                     </div>
 
                     <!-- Project 2: NISAR Precision Agriculture -->
-                    <div class="project-card glass-card-interactive rounded-2xl p-6 border border-slate-800 flex flex-col justify-between" data-title="NISAR-Based Precision Agriculture Monitoring" data-tags="research mrsac radar sar gis esp32 telemetry remote sensing">
+                    <div class="project-card glass-card-interactive rounded-3xl p-7 sm:p-8 border border-white/[0.08] flex flex-col justify-between" data-title="NISAR-Based Precision Agriculture Monitoring" data-tags="research mrsac radar sar gis esp32 telemetry remote sensing">
                         <div>
                             <div class="flex justify-between items-center mb-3">
                                 <span class="px-2.5 py-1 bg-silicon-cyan/10 text-silicon-cyan border border-silicon-cyan/30 text-[11px] font-mono rounded-full font-semibold">MRSAC Internship</span>
@@ -1258,7 +1264,7 @@
                     </div>
 
                     <!-- Project 3: Digital Design & Verification -->
-                    <div class="project-card glass-card-interactive rounded-2xl p-6 border border-slate-800 flex flex-col justify-between" data-title="Digital Design & Verification (Verilog & VHDL)" data-tags="verilog vhd vhdl fpga xilinx fsm timing simulation">
+                    <div class="project-card glass-card-interactive rounded-3xl p-7 sm:p-8 border border-white/[0.08] flex flex-col justify-between" data-title="Digital Design & Verification (Verilog & VHDL)" data-tags="verilog vhd vhdl fpga xilinx fsm timing simulation">
                         <div>
                             <div class="flex justify-between items-center mb-3">
                                 <span class="px-2.5 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[11px] font-mono rounded-full font-semibold">Verilog & VHDL</span>
@@ -1284,7 +1290,7 @@
                     </div>
 
                     <!-- Project 4: FPGA-Based Digital System Design -->
-                    <div class="project-card glass-card-interactive rounded-2xl p-6 border border-slate-800 flex flex-col justify-between" data-title="FPGA-Based Digital System Design using VHDL" data-tags="fpga spartan xilinx vhdl priority encoder alu registers">
+                    <div class="project-card glass-card-interactive rounded-3xl p-7 sm:p-8 border border-white/[0.08] flex flex-col justify-between" data-title="FPGA-Based Digital System Design using VHDL" data-tags="fpga spartan xilinx vhdl priority encoder alu registers">
                         <div>
                             <div class="flex justify-between items-center mb-3">
                                 <span class="px-2.5 py-1 bg-silicon-amber/10 text-silicon-amber border border-silicon-amber/30 text-[11px] font-mono rounded-full font-semibold">FPGA Synthesis</span>
@@ -1310,7 +1316,7 @@
                     </div>
 
                     <!-- Project 5: Semiconductor Simulation NGSpice -->
-                    <div class="project-card glass-card-interactive rounded-2xl p-6 border border-slate-800 flex flex-col justify-between" data-title="Semiconductor Device Simulation & Characterization" data-tags="semiconductor ngspice spice iit bombay mosfet diode cv iv">
+                    <div class="project-card glass-card-interactive rounded-3xl p-7 sm:p-8 border border-white/[0.08] flex flex-col justify-between" data-title="Semiconductor Device Simulation & Characterization" data-tags="semiconductor ngspice spice iit bombay mosfet diode cv iv">
                         <div>
                             <div class="flex justify-between items-center mb-3">
                                 <span class="px-2.5 py-1 bg-silicon-cyan/10 text-silicon-cyan border border-silicon-cyan/30 text-[11px] font-mono rounded-full font-semibold">IIT Bombay WEL Lab</span>
@@ -1336,7 +1342,7 @@
                     </div>
 
                     <!-- Project 6: Sleep Apnea Detection MATLAB -->
-                    <div class="project-card glass-card-interactive rounded-2xl p-6 border border-slate-800 flex flex-col justify-between" data-title="Sleep Apnea Detection using MATLAB" data-tags="matlab dsp fft butterworth signal filter biomedical">
+                    <div class="project-card glass-card-interactive rounded-3xl p-7 sm:p-8 border border-white/[0.08] flex flex-col justify-between" data-title="Sleep Apnea Detection using MATLAB" data-tags="matlab dsp fft butterworth signal filter biomedical">
                         <div>
                             <div class="flex justify-between items-center mb-3">
                                 <span class="px-2.5 py-1 bg-brand-500/10 text-brand-400 border border-brand-500/30 text-[11px] font-mono rounded-full font-semibold">DSP Simulation</span>
@@ -1362,7 +1368,7 @@
                     </div>
 
                     <!-- Project 7: Smart Parking ESP32 -->
-                    <div class="project-card glass-card-interactive rounded-2xl p-6 border border-slate-800 flex flex-col justify-between" data-title="Smart Parking System (ESP32)" data-tags="esp32 iot ir sensor lcd parking automation">
+                    <div class="project-card glass-card-interactive rounded-3xl p-7 sm:p-8 border border-white/[0.08] flex flex-col justify-between" data-title="Smart Parking System (ESP32)" data-tags="esp32 iot ir sensor lcd parking automation">
                         <div>
                             <div class="flex justify-between items-center mb-3">
                                 <span class="px-2.5 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[11px] font-mono rounded-full font-semibold">IoT System</span>
@@ -1388,7 +1394,7 @@
                     </div>
 
                     <!-- Project 8: Obstacle Avoidance Robot -->
-                    <div class="project-card glass-card-interactive rounded-2xl p-6 border border-slate-800 flex flex-col justify-between" data-title="Obstacle Avoidance Autonomous Robot" data-tags="robotics arduino techfest iit bombay ir ultrasonic motor">
+                    <div class="project-card glass-card-interactive rounded-3xl p-7 sm:p-8 border border-white/[0.08] flex flex-col justify-between" data-title="Obstacle Avoidance Autonomous Robot" data-tags="robotics arduino techfest iit bombay ir ultrasonic motor">
                         <div>
                             <div class="flex justify-between items-center mb-3">
                                 <span class="px-2.5 py-1 bg-silicon-cyan/10 text-silicon-cyan border border-silicon-cyan/30 text-[11px] font-mono rounded-full font-semibold">IIT Bombay TechFest</span>
@@ -1413,7 +1419,7 @@
                     </div>
 
                     <!-- Project 9: Fire Alarm System -->
-                    <div class="project-card glass-card-interactive rounded-2xl p-6 border border-slate-800 flex flex-col justify-between" data-title="Fire Alarm System Simulation & Circuit" data-tags="multisim circuit hardware sensor flame buzzer prototype">
+                    <div class="project-card glass-card-interactive rounded-3xl p-7 sm:p-8 border border-white/[0.08] flex flex-col justify-between" data-title="Fire Alarm System Simulation & Circuit" data-tags="multisim circuit hardware sensor flame buzzer prototype">
                         <div>
                             <div class="flex justify-between items-center mb-3">
                                 <span class="px-2.5 py-1 bg-silicon-amber/10 text-silicon-amber border border-silicon-amber/30 text-[11px] font-mono rounded-full font-semibold">NI Multisim Circuit</span>
@@ -1438,7 +1444,7 @@
                     </div>
 
                     <!-- Project 10: Robo Race Vehicle -->
-                    <div class="project-card glass-card-interactive rounded-2xl p-6 border border-slate-800 flex flex-col justify-between md:col-span-2 lg:col-span-1" data-title="Robo Race Vehicle (Competitions)" data-tags="robotics chassis motors rf remote race torque">
+                    <div class="project-card glass-card-interactive rounded-3xl p-7 sm:p-8 border border-white/[0.08] flex flex-col justify-between md:col-span-2 lg:col-span-1" data-title="Robo Race Vehicle (Competitions)" data-tags="robotics chassis motors rf remote race torque">
                         <div>
                             <div class="flex justify-between items-center mb-3">
                                 <span class="px-2.5 py-1 bg-silicon-rose/10 text-rose-400 border border-rose-500/30 text-[11px] font-mono rounded-full font-semibold">Competition Chassis</span>
@@ -1466,27 +1472,27 @@
             </div>
         </section>
 
-        <!-- WORK EXPERIENCE & RESEARCH TIMELINE -->
-        <section id="experience" class="py-20 border-b border-slate-800/50">
+        <!-- WORK EXPERIENCE & RESEARCH TIMELINE (Spacious Pathway) -->
+        <section id="experience" class="py-24 sm:py-32 border-b border-slate-800/50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-400 mb-1">
+                <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20 space-y-3">
+                    <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-400 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/25">
                         <i data-lucide="briefcase" class="w-4 h-4"></i>
                         Career Pathway
                     </div>
-                    <h2 class="text-3xl font-extrabold text-white">Research & Industrial Experience</h2>
-                    <p class="mt-2 text-slate-300 text-sm">Real-world engineering internships in remote sensing research and industrial automation.</p>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">Research & Industrial Experience</h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">Real-world engineering internships in remote sensing research and industrial automation.</p>
                 </div>
 
-                <div class="relative border-l-2 border-slate-800 max-w-3xl mx-auto pl-6 sm:pl-8 space-y-12">
+                <div class="relative border-l-2 border-slate-800 max-w-4xl mx-auto pl-8 sm:pl-10 space-y-14 sm:space-y-16">
 
                     <!-- Experience 1: MRSAC -->
                     <div class="relative group">
                         <!-- Timeline Node Dot -->
                         <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-dark-950 border-2 border-emerald-500 group-hover:scale-125 group-hover:bg-emerald-500 transition-all"></div>
                         
-                        <div class="glass-panel p-6 sm:p-7 rounded-2xl border border-slate-800 group-hover:border-emerald-500/40 transition-all">
+                        <div class="glass-panel p-7 sm:p-9 rounded-3xl border border-white/[0.08] group-hover:border-emerald-500/40 transition-all">
                             <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
                                 <div>
                                     <h3 class="text-lg font-bold text-white">Research Intern</h3>
@@ -1518,7 +1524,7 @@
                     <div class="relative group">
                         <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-dark-950 border-2 border-silicon-cyan group-hover:scale-125 group-hover:bg-silicon-cyan transition-all"></div>
                         
-                        <div class="glass-panel p-6 sm:p-7 rounded-2xl border border-slate-800 group-hover:border-silicon-cyan/40 transition-all">
+                        <div class="glass-panel p-7 sm:p-9 rounded-3xl border border-white/[0.08] group-hover:border-silicon-cyan/40 transition-all">
                             <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
                                 <div>
                                     <h3 class="text-lg font-bold text-white">Industrial Automation with IIoT Intern</h3>
@@ -1550,22 +1556,22 @@
             </div>
         </section>
 
-        <!-- VERIFIED CREDENTIALS, LICENSES & HONORS -->
-        <section id="certifications" class="py-20 border-b border-slate-800/50">
+        <!-- VERIFIED CREDENTIALS, LICENSES & HONORS (Spacious Grid) -->
+        <section id="certifications" class="py-24 sm:py-32 border-b border-slate-800/50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-400 mb-1">
+                <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20 space-y-3">
+                    <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-400 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/25">
                         <i data-lucide="check-circle-2" class="w-4 h-4"></i>
                         Validated Qualifications
                     </div>
-                    <h2 class="text-3xl font-extrabold text-white">Licenses, Certifications & Honors</h2>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">Licenses, Certifications & Honors</h2>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                     <!-- Award Highlight Card -->
-                    <div class="glass-panel p-6 rounded-2xl border border-silicon-amber/40 bg-silicon-amber/5 md:col-span-2 lg:col-span-2 shadow-glow-amber">
+                    <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-silicon-amber/50 bg-silicon-amber/5 md:col-span-2 lg:col-span-2 shadow-glow-amber">
                         <div class="flex items-center gap-3.5 mb-3">
                             <div class="w-12 h-12 rounded-xl bg-silicon-amber/20 flex items-center justify-center text-silicon-amber shrink-0">
                                 <i data-lucide="award" class="w-7 h-7"></i>
@@ -1582,7 +1588,7 @@
                     </div>
 
                     <!-- Cert 1: COEP -->
-                    <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-brand-500/50 transition-all flex flex-col justify-between">
+                    <div class="glass-panel p-7 sm:p-8 rounded-3xl border border-white/[0.08] hover:border-brand-500/50 transition-all flex flex-col justify-between">
                         <div>
                             <div class="flex items-center gap-3 mb-3">
                                 <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-400 font-mono font-bold text-xs">
@@ -1606,7 +1612,7 @@
                     </div>
 
                     <!-- Cert 2: NPTEL Microscopic Control -->
-                    <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-silicon-cyan/50 transition-all flex flex-col justify-between">
+                    <div class="glass-panel p-7 sm:p-8 rounded-3xl border border-white/[0.08] hover:border-silicon-cyan/50 transition-all flex flex-col justify-between">
                         <div>
                             <div class="flex items-center gap-3 mb-3">
                                 <div class="w-10 h-10 rounded-xl bg-silicon-cyan/10 border border-silicon-cyan/30 flex items-center justify-center text-silicon-cyan font-mono font-bold text-xs">
@@ -1630,7 +1636,7 @@
                     </div>
 
                     <!-- Cert 3: NPTEL NGSpice -->
-                    <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-emerald-500/50 transition-all flex flex-col justify-between">
+                    <div class="glass-panel p-7 sm:p-8 rounded-3xl border border-white/[0.08] hover:border-emerald-500/50 transition-all flex flex-col justify-between">
                         <div>
                             <div class="flex items-center gap-3 mb-3">
                                 <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-mono font-bold text-xs">
@@ -1654,7 +1660,7 @@
                     </div>
 
                     <!-- Cert 4: Hixaa IoT -->
-                    <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-silicon-amber/50 transition-all flex flex-col justify-between">
+                    <div class="glass-panel p-7 sm:p-8 rounded-3xl border border-white/[0.08] hover:border-silicon-amber/50 transition-all flex flex-col justify-between">
                         <div>
                             <div class="flex items-center gap-3 mb-3">
                                 <div class="w-10 h-10 rounded-xl bg-silicon-amber/10 border border-silicon-amber/30 flex items-center justify-center text-silicon-amber font-mono font-bold text-xs">
@@ -1681,11 +1687,11 @@
             </div>
         </section>
 
-        <!-- CONTACT & INQUIRY SECTION -->
-        <section id="contact" class="py-20 relative">
+        <!-- CONTACT & INQUIRY SECTION (Spacious Executive Inquiries) -->
+        <section id="contact" class="py-24 sm:py-32 relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="glass-panel rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl relative overflow-hidden">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="glass-panel rounded-3xl p-8 sm:p-14 lg:p-16 border border-white/10 shadow-2xl relative overflow-hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
                         
                         <div class="lg:col-span-7 space-y-5">
                             <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-400">
@@ -1700,7 +1706,7 @@
                             <!-- Direct Channels with One-click Copy -->
                             <div class="pt-3 space-y-3 font-mono text-xs sm:text-sm">
                                 
-                                <div class="flex items-center justify-between p-3 rounded-xl bg-dark-900 border border-slate-800">
+                                <div class="flex items-center justify-between p-4 rounded-2xl bg-dark-950/80 border border-white/[0.08]">
                                     <div class="flex items-center gap-3 text-slate-200">
                                         <div class="w-9 h-9 rounded-lg bg-brand-500/10 flex items-center justify-center text-brand-400 shrink-0">
                                             <i data-lucide="mail" class="w-4 h-4"></i>
@@ -1713,7 +1719,7 @@
                                     </button>
                                 </div>
 
-                                <div class="flex items-center justify-between p-3 rounded-xl bg-dark-900 border border-slate-800">
+                                <div class="flex items-center justify-between p-4 rounded-2xl bg-dark-950/80 border border-white/[0.08]">
                                     <div class="flex items-center gap-3 text-slate-200">
                                         <div class="w-9 h-9 rounded-lg bg-silicon-cyan/10 flex items-center justify-center text-silicon-cyan shrink-0">
                                             <i class="fa-brands fa-linkedin-in text-base"></i>
@@ -1726,7 +1732,7 @@
                                     </a>
                                 </div>
 
-                                <div class="flex items-center justify-between p-3 rounded-xl bg-dark-900 border border-slate-800">
+                                <div class="flex items-center justify-between p-4 rounded-2xl bg-dark-950/80 border border-white/[0.08]">
                                     <div class="flex items-center gap-3 text-slate-200">
                                         <div class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-slate-300 shrink-0">
                                             <i class="fa-brands fa-github text-base"></i>
@@ -1739,7 +1745,7 @@
                                     </a>
                                 </div>
 
-                                <div class="p-3 rounded-xl bg-dark-900 border border-slate-800 flex items-center gap-3 text-slate-300">
+                                <div class="p-4 rounded-2xl bg-dark-950/80 border border-white/[0.08] flex items-center gap-3 text-slate-300">
                                     <div class="w-9 h-9 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 shrink-0">
                                         <i data-lucide="map-pin" class="w-4 h-4"></i>
                                     </div>
@@ -1750,7 +1756,7 @@
                         </div>
 
                         <!-- Inquiry Composer Form -->
-                        <div class="lg:col-span-5 bg-dark-900/90 p-6 sm:p-7 rounded-2xl border border-slate-800">
+                        <div class="lg:col-span-5 bg-dark-900/90 p-7 sm:p-9 rounded-3xl border border-white/[0.08]">
                             <h3 class="text-base font-bold text-white mb-3 font-mono flex items-center gap-2">
                                 <i data-lucide="send" class="w-4 h-4 text-brand-400"></i>
                                 Send Engineering Inquiry
@@ -1795,8 +1801,8 @@
 
     </main>
 
-    <!-- FOOTER -->
-    <footer class="border-t border-slate-800/80 bg-dark-950 py-8 text-xs font-mono text-slate-500">
+    <!-- FOOTER (Spacious & Clean) -->
+    <footer class="border-t border-slate-800/80 bg-dark-950 py-12 text-xs sm:text-sm font-mono text-slate-500">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
                 © 2026 Ashlesha Manish Pokale. Engineered with precision & curiosity.
