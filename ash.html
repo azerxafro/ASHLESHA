@@ -228,94 +228,131 @@
     <div class="fixed top-1/3 right-10 w-[550px] h-[550px] bg-silicon-cyan/10 rounded-full blur-[150px] pointer-events-none -z-10"></div>
     <div class="fixed bottom-20 left-10 w-[450px] h-[450px] bg-silicon-emerald/8 rounded-full blur-[140px] pointer-events-none -z-10"></div>
 
-    <!-- Floating Island Header & Navigation Bar -->
+    <!-- Compact Floating Island Header & Navigation Bar -->
     <header class="fixed top-0 sm:top-3 left-0 right-0 z-50 transition-all duration-300 px-0 sm:px-4 lg:px-8 pointer-events-none" id="siteHeader">
-        <div class="max-w-7xl mx-auto h-16 px-4 sm:px-6 rounded-none sm:rounded-2xl glass-panel-elevated border-b sm:border border-white/10 shadow-2xl flex items-center justify-between pointer-events-auto backdrop-blur-2xl">
+        <div class="max-w-6xl mx-auto h-13 sm:h-14 px-3 sm:px-5 rounded-none sm:rounded-2xl glass-panel-elevated border-b sm:border border-white/10 shadow-xl flex items-center justify-between pointer-events-auto backdrop-blur-2xl">
             
             <!-- Brand / Logo -->
-            <a href="#hero" class="flex items-center gap-3 group" onclick="playAudioClick()">
-                <div class="relative">
-                    <span class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-600 via-indigo-600 to-silicon-cyan flex items-center justify-center text-white text-sm font-mono font-bold shadow-lg shadow-brand-500/30 group-hover:scale-105 transition-transform">
+            <a href="#hero" class="flex items-center gap-2.5 group" onclick="playAudioClick()">
+                <div class="relative shrink-0">
+                    <span class="w-8 h-8 rounded-xl bg-gradient-to-tr from-brand-600 via-indigo-600 to-silicon-cyan flex items-center justify-center text-white text-xs font-mono font-bold shadow-md shadow-brand-500/30 group-hover:scale-105 transition-transform">
                         AP
                     </span>
-                    <span class="absolute -bottom-1 -right-1 w-3 h-3 rounded-full bg-emerald-400 border-2 border-dark-950 animate-ping"></span>
-                    <span class="absolute -bottom-1 -right-1 w-3 h-3 rounded-full bg-emerald-400 border-2 border-dark-950"></span>
+                    <span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-400 border-2 border-dark-950 animate-ping"></span>
+                    <span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-400 border-2 border-dark-950"></span>
                 </div>
-                <div>
-                    <span class="font-mono text-sm font-bold text-white tracking-tight flex items-center gap-1.5">
-                        Ashlesha M. Pokale
-                        <span class="hidden sm:inline-block text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-brand-500/20 text-brand-400 border border-brand-500/30">ETC</span>
-                    </span>
-                    <span class="text-[11px] font-mono text-slate-400 block -mt-0.5">Hardware & Semiconductor Eng.</span>
+                <div class="flex items-center gap-1.5">
+                    <span class="font-mono text-xs sm:text-sm font-bold text-white tracking-tight">Ashlesha M. Pokale</span>
+                    <span class="hidden md:inline-block text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-brand-500/15 text-brand-300 border border-brand-500/25">ETC</span>
                 </div>
             </a>
 
-            <!-- Desktop Navigation Links -->
-            <nav class="hidden lg:flex items-center gap-6 text-xs font-mono font-medium text-slate-300">
-                <a href="#about" class="hover:text-silicon-cyan transition-colors" onclick="playAudioClick()">Overview</a>
-                <a href="#major-project" class="hover:text-silicon-amber transition-colors flex items-center gap-1.5" onclick="playAudioClick()">
+            <!-- Desktop Navigation Links (Compact & Streamlined) -->
+            <nav class="hidden lg:flex items-center gap-1 xl:gap-1.5 text-xs font-mono font-medium text-slate-300">
+                <a href="#about" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-white/[0.06] transition-all" onclick="playAudioClick()">Overview</a>
+                <a href="#major-project" class="px-2.5 py-1.5 rounded-lg text-silicon-amber/90 hover:text-silicon-amber hover:bg-silicon-amber/10 flex items-center gap-1.5 transition-all" onclick="playAudioClick()">
                     <span class="w-1.5 h-1.5 rounded-full bg-silicon-amber animate-pulse"></span>
-                    ITMS Project
+                    ITMS
                 </a>
-                <a href="#hardware-lab" class="hover:text-brand-400 transition-colors flex items-center gap-1.5" onclick="playAudioClick()">
+                <a href="#hardware-lab" class="px-2.5 py-1.5 rounded-lg text-brand-300 hover:text-brand-200 hover:bg-brand-500/10 flex items-center gap-1.5 transition-all" onclick="playAudioClick()">
                     <i data-lucide="cpu" class="w-3.5 h-3.5 text-brand-400"></i>
-                    Hardware Lab
+                    Lab
                 </a>
-                <a href="#skills" class="hover:text-silicon-cyan transition-colors" onclick="playAudioClick()">Skills</a>
-                <a href="#projects" class="hover:text-silicon-cyan transition-colors" onclick="playAudioClick()">10 Projects</a>
-                <a href="#experience" class="hover:text-silicon-cyan transition-colors" onclick="playAudioClick()">Experience</a>
-                <a href="#certifications" class="hover:text-silicon-cyan transition-colors" onclick="playAudioClick()">Credentials</a>
+                <a href="#skills" class="px-2.5 py-1.5 rounded-lg hover:text-silicon-cyan hover:bg-white/[0.06] transition-all" onclick="playAudioClick()">Skills</a>
+                <a href="#projects" class="px-2.5 py-1.5 rounded-lg hover:text-silicon-cyan hover:bg-white/[0.06] transition-all" onclick="playAudioClick()">Projects</a>
+                <a href="#experience" class="px-2.5 py-1.5 rounded-lg hover:text-silicon-cyan hover:bg-white/[0.06] transition-all" onclick="playAudioClick()">Experience</a>
+                <a href="#certifications" class="hidden xl:inline-block px-2.5 py-1.5 rounded-lg hover:text-silicon-cyan hover:bg-white/[0.06] transition-all" onclick="playAudioClick()">Credentials</a>
             </nav>
 
-            <!-- Quick Action Icons & Audio Control -->
-            <div class="flex items-center gap-2 sm:gap-3">
+            <!-- Quick Action Icons & Audio Control (Compact Footprint) -->
+            <div class="flex items-center gap-1.5 sm:gap-2">
                 
                 <!-- Audio SFX Toggle Button -->
-                <button id="soundToggleBtn" onclick="toggleAudio()" class="p-2 text-slate-400 hover:text-white hover:bg-slate-800/80 rounded-lg transition-all" title="Toggle Hardware Audio Click SFX" aria-label="Toggle Hardware Audio SFX">
-                    <i data-lucide="volume-2" id="soundIcon" class="w-4 h-4 text-silicon-cyan"></i>
+                <button id="soundToggleBtn" onclick="toggleAudio()" class="w-8 h-8 flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/[0.06] rounded-lg transition-all" title="Toggle Hardware Audio Click SFX" aria-label="Toggle Hardware Audio SFX">
+                    <i data-lucide="volume-2" id="soundIcon" class="w-3.5 h-3.5 text-silicon-cyan"></i>
                 </button>
 
-                <!-- Socials -->
-                <a href="https://linkedin.com/in/ashleshampokale" target="_blank" rel="noopener noreferrer" class="p-2 text-slate-400 hover:text-white hover:bg-slate-800/80 rounded-lg transition-all" title="LinkedIn Profile">
-                    <i class="fa-brands fa-linkedin-in text-base"></i>
+                <!-- Socials (Hidden on small mobile, compact on sm/md) -->
+                <a href="https://linkedin.com/in/ashleshampokale" target="_blank" rel="noopener noreferrer" class="hidden sm:flex w-8 h-8 items-center justify-center text-slate-400 hover:text-white hover:bg-white/[0.06] rounded-lg transition-all" title="LinkedIn Profile">
+                    <i class="fa-brands fa-linkedin-in text-sm"></i>
                 </a>
-                <a href="https://github.com/ashleshampokale" target="_blank" rel="noopener noreferrer" class="p-2 text-slate-400 hover:text-white hover:bg-slate-800/80 rounded-lg transition-all" title="GitHub Profile">
-                    <i class="fa-brands fa-github text-base"></i>
+                <a href="https://github.com/ashleshampokale" target="_blank" rel="noopener noreferrer" class="hidden sm:flex w-8 h-8 items-center justify-center text-slate-400 hover:text-white hover:bg-white/[0.06] rounded-lg transition-all" title="GitHub Profile">
+                    <i class="fa-brands fa-github text-sm"></i>
                 </a>
 
                 <!-- Resume Modal Trigger -->
-                <button onclick="openResumeModal()" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium text-slate-200 bg-slate-900 border border-slate-700 hover:border-brand-500 hover:text-white transition-all">
+                <button onclick="openResumeModal()" class="hidden md:inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-mono font-medium text-slate-200 bg-slate-900 border border-slate-700/80 hover:border-brand-500 hover:text-white transition-all">
                     <i data-lucide="file-text" class="w-3.5 h-3.5 text-brand-400"></i>
                     <span>Resume</span>
                 </button>
 
                 <!-- Contact CTA Button -->
-                <a href="#contact" class="inline-flex items-center gap-1.5 bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white px-3.5 py-1.5 rounded-lg text-xs font-semibold font-mono transition-all shadow-md shadow-brand-600/30" onclick="playAudioClick()">
+                <a href="#contact" class="inline-flex items-center gap-1 bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white px-3 py-1.5 rounded-lg text-xs font-semibold font-mono transition-all shadow-md shadow-brand-600/30 shrink-0" onclick="playAudioClick()">
                     <span>Contact</span>
-                    <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                    <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
                 </a>
 
-                <!-- Mobile Menu Button -->
-                <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-all" aria-label="Open Navigation Menu">
-                    <i data-lucide="menu" class="w-5 h-5"></i>
+                <!-- Mobile Menu Toggle Button -->
+                <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden w-8 h-8 flex items-center justify-center text-slate-300 hover:text-white hover:bg-white/[0.08] rounded-lg transition-all" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                    <i data-lucide="menu" id="mobileMenuIcon" class="w-4 h-4"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Mobile Drawer Navigation -->
-        <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-800/80 bg-dark-900/95 backdrop-blur-xl px-4 py-4 space-y-3">
+        <!-- Mobile Floating Dropdown Navigation Card -->
+        <div id="mobileMenu" class="hidden lg:hidden mt-2 max-w-6xl mx-auto rounded-2xl glass-panel-elevated border border-white/10 shadow-2xl backdrop-blur-2xl p-4 space-y-3 pointer-events-auto">
             <div class="grid grid-cols-2 gap-2 text-xs font-mono">
-                <a href="#about" class="p-2 rounded bg-slate-800/50 hover:bg-slate-800 text-slate-200" onclick="toggleMobileMenu()">Overview</a>
-                <a href="#major-project" class="p-2 rounded bg-silicon-amber/10 border border-silicon-amber/30 text-silicon-amber" onclick="toggleMobileMenu()">🏆 ITMS Major Project</a>
-                <a href="#hardware-lab" class="p-2 rounded bg-brand-500/10 border border-brand-500/30 text-brand-400" onclick="toggleMobileMenu()">⚡ Hardware Lab</a>
-                <a href="#skills" class="p-2 rounded bg-slate-800/50 hover:bg-slate-800 text-slate-200" onclick="toggleMobileMenu()">Skills Matrix</a>
-                <a href="#projects" class="p-2 rounded bg-slate-800/50 hover:bg-slate-800 text-slate-200" onclick="toggleMobileMenu()">10 Projects</a>
-                <a href="#experience" class="p-2 rounded bg-slate-800/50 hover:bg-slate-800 text-slate-200" onclick="toggleMobileMenu()">Experience</a>
-                <a href="#certifications" class="p-2 rounded bg-slate-800/50 hover:bg-slate-800 text-slate-200" onclick="toggleMobileMenu()">Certifications</a>
-                <button onclick="openResumeModal(); toggleMobileMenu();" class="p-2 rounded bg-slate-800 text-left text-slate-200 flex items-center gap-1.5">
+                <a href="#about" class="p-2.5 rounded-xl bg-slate-900/60 hover:bg-slate-800 text-slate-200 flex items-center gap-2 border border-white/5 active:scale-95 transition-all" onclick="toggleMobileMenu()">
+                    <i data-lucide="user" class="w-3.5 h-3.5 text-silicon-cyan"></i>
+                    <span>Overview</span>
+                </a>
+                <a href="#major-project" class="p-2.5 rounded-xl bg-silicon-amber/10 border border-silicon-amber/30 text-silicon-amber flex items-center gap-2 active:scale-95 transition-all" onclick="toggleMobileMenu()">
+                    <i data-lucide="trophy" class="w-3.5 h-3.5 text-silicon-amber"></i>
+                    <span class="font-bold">ITMS Project</span>
+                </a>
+                <a href="#hardware-lab" class="p-2.5 rounded-xl bg-brand-500/10 border border-brand-500/30 text-brand-300 flex items-center gap-2 active:scale-95 transition-all" onclick="toggleMobileMenu()">
+                    <i data-lucide="cpu" class="w-3.5 h-3.5 text-brand-400"></i>
+                    <span class="font-bold">Hardware Lab</span>
+                </a>
+                <a href="#skills" class="p-2.5 rounded-xl bg-slate-900/60 hover:bg-slate-800 text-slate-200 flex items-center gap-2 border border-white/5 active:scale-95 transition-all" onclick="toggleMobileMenu()">
+                    <i data-lucide="wrench" class="w-3.5 h-3.5 text-emerald-400"></i>
+                    <span>Skills Matrix</span>
+                </a>
+                <a href="#projects" class="p-2.5 rounded-xl bg-slate-900/60 hover:bg-slate-800 text-slate-200 flex items-center gap-2 border border-white/5 active:scale-95 transition-all" onclick="toggleMobileMenu()">
+                    <i data-lucide="layers" class="w-3.5 h-3.5 text-silicon-cyan"></i>
+                    <span>10 Projects</span>
+                </a>
+                <a href="#experience" class="p-2.5 rounded-xl bg-slate-900/60 hover:bg-slate-800 text-slate-200 flex items-center gap-2 border border-white/5 active:scale-95 transition-all" onclick="toggleMobileMenu()">
+                    <i data-lucide="briefcase" class="w-3.5 h-3.5 text-indigo-400"></i>
+                    <span>Experience</span>
+                </a>
+                <a href="#certifications" class="p-2.5 rounded-xl bg-slate-900/60 hover:bg-slate-800 text-slate-200 flex items-center gap-2 border border-white/5 active:scale-95 transition-all" onclick="toggleMobileMenu()">
+                    <i data-lucide="award" class="w-3.5 h-3.5 text-silicon-amber"></i>
+                    <span>Credentials</span>
+                </a>
+                <button onclick="openResumeModal(); toggleMobileMenu();" class="p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 flex items-center gap-2 border border-brand-500/30 text-left active:scale-95 transition-all">
                     <i data-lucide="file-text" class="w-3.5 h-3.5 text-brand-400"></i>
-                    Resume Summary
+                    <span>Resume PDF</span>
                 </button>
+            </div>
+
+            <!-- Mobile Quick Action Strip -->
+            <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs font-mono">
+                <div class="flex items-center gap-2">
+                    <a href="https://linkedin.com/in/ashleshampokale" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-slate-800/60 text-slate-300 hover:text-white" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in text-sm"></i>
+                    </a>
+                    <a href="https://github.com/ashleshampokale" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-slate-800/60 text-slate-300 hover:text-white" title="GitHub">
+                        <i class="fa-brands fa-github text-sm"></i>
+                    </a>
+                    <a href="mailto:ashleshapokale@gmail.com" class="p-2 rounded-lg bg-slate-800/60 text-slate-300 hover:text-white" title="Email">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                    </a>
+                </div>
+                <a href="#contact" onclick="toggleMobileMenu()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-brand-600 to-indigo-600 text-white font-semibold text-xs shadow-md">
+                    <span>Get in Touch</span>
+                    <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                </a>
             </div>
         </div>
     </header>
@@ -2651,13 +2688,42 @@
         });
 
         // -------------------------------------------------------------
-        // Mobile Drawer Toggle
+        // Mobile Drawer Toggle & Accessibility
         // -------------------------------------------------------------
         function toggleMobileMenu() {
             playAudioClick(600, 0.03);
             const menu = document.getElementById("mobileMenu");
-            menu.classList.toggle("hidden");
+            const btn = document.getElementById("mobileMenuBtn");
+            const icon = document.getElementById("mobileMenuIcon");
+            if (!menu) return;
+
+            const isHidden = menu.classList.contains("hidden");
+            if (isHidden) {
+                menu.classList.remove("hidden");
+                if (btn) btn.setAttribute("aria-expanded", "true");
+                if (icon) {
+                    icon.setAttribute("data-lucide", "x");
+                    if (window.lucide) lucide.createIcons();
+                }
+            } else {
+                menu.classList.add("hidden");
+                if (btn) btn.setAttribute("aria-expanded", "false");
+                if (icon) {
+                    icon.setAttribute("data-lucide", "menu");
+                    if (window.lucide) lucide.createIcons();
+                }
+            }
         }
+
+        // Close mobile menu on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const menu = document.getElementById("mobileMenu");
+                if (menu && !menu.classList.contains("hidden")) {
+                    toggleMobileMenu();
+                }
+            }
+        });
 
         // -------------------------------------------------------------
         // Contact Form Submission Handler
