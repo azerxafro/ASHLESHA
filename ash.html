@@ -1600,21 +1600,78 @@ ${message}`);
         // ==================== F1 RACING SPLASH SCREEN CONTROLLER ====================
         let f1Dismissed = false;
 
-        function playF1LaunchSound() {
+        // Cinematic Aerodynamic F1 Swoosh Sound Effect
+        function playF1SwooshSound() {
             try {
                 const ctx = window.f1AudioCtx || (window.f1AudioCtx = new (window.AudioContext || window.webkitAudioContext)());
                 if (ctx.state === 'suspended') ctx.resume();
-                const osc = ctx.createOscillator();
-                const gain = ctx.createGain();
-                osc.type = 'sawtooth';
-                osc.frequency.setValueAtTime(140, ctx.currentTime);
-                osc.frequency.exponentialRampToValueAtTime(520, ctx.currentTime + 0.35);
-                gain.gain.setValueAtTime(0.08, ctx.currentTime);
-                gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.45);
-                osc.connect(gain);
-                gain.connect(ctx.destination);
-                osc.start();
-                osc.stop(ctx.currentTime + 0.45);
+
+                const now = ctx.currentTime;
+                const duration = 0.65;
+
+                // 1. Aerodynamic Wind Noise
+                const bufferSize = Math.floor(ctx.sampleRate * duration);
+                const noiseBuffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+                const data = noiseBuffer.getChannelData(0);
+                for (let i = 0; i < bufferSize; i++) {
+                    data[i] = Math.random() * 2 - 1;
+                }
+
+                const noise = ctx.createBufferSource();
+                noise.buffer = noiseBuffer;
+
+                // 2. Resonant Filter for Doppler Swoosh Sweep
+                const filter = ctx.createBiquadFilter();
+                filter.type = 'bandpass';
+                filter.Q.setValueAtTime(3.2, now);
+                filter.frequency.setValueAtTime(280, now);
+                filter.frequency.exponentialRampToValueAtTime(2400, now + 0.22);
+                filter.frequency.exponentialRampToValueAtTime(360, now + duration);
+
+                // 3. Amplitude Envelope (Smooth attack & fast release)
+                const noiseGain = ctx.createGain();
+                noiseGain.gain.setValueAtTime(0.001, now);
+                noiseGain.gain.exponentialRampToValueAtTime(0.18, now + 0.22);
+                noiseGain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+                // 4. Low-end air displacement pocket
+                const subOsc = ctx.createOscillator();
+                const subGain = ctx.createGain();
+                subOsc.type = 'sine';
+                subOsc.frequency.setValueAtTime(80, now);
+                subOsc.frequency.exponentialRampToValueAtTime(160, now + 0.2);
+                subOsc.frequency.exponentialRampToValueAtTime(40, now + duration);
+                subGain.gain.setValueAtTime(0.001, now);
+                subGain.gain.exponentialRampToValueAtTime(0.10, now + 0.2);
+                subGain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+                // 5. Stereo Panner for Flyby motion (Left -> Right)
+                let panNode = null;
+                if (ctx.createStereoPanner) {
+                    try {
+                        panNode = ctx.createStereoPanner();
+                        panNode.pan.setValueAtTime(-0.6, now);
+                        panNode.pan.linearRampToValueAtTime(0.6, now + duration);
+                    } catch (e) {}
+                }
+
+                // Connect graph
+                noise.connect(filter);
+                filter.connect(noiseGain);
+                if (panNode) {
+                    noiseGain.connect(panNode);
+                    panNode.connect(ctx.destination);
+                } else {
+                    noiseGain.connect(ctx.destination);
+                }
+
+                subOsc.connect(subGain);
+                subGain.connect(ctx.destination);
+
+                noise.start(now);
+                noise.stop(now + duration);
+                subOsc.start(now);
+                subOsc.stop(now + duration);
             } catch (e) {}
         }
 
@@ -1643,10 +1700,20 @@ ${message}`);
                 }
             });
 
-            // Play swift throttle sound
+            // Trigger aerodynamic swoosh sound on animation entrance
             setTimeout(() => {
-                if (!f1Dismissed) playF1LaunchSound();
-            }, 100);
+                if (!f1Dismissed) playF1SwooshSound();
+            }, 80);
+
+            // Also trigger swoosh on user first interaction if autoplay policy delayed audio
+            const splashElem = document.getElementById('f1-splash');
+            if (splashElem) {
+                const onFirstTouch = () => {
+                    playF1SwooshSound();
+                    splashElem.removeEventListener('pointerdown', onFirstTouch);
+                };
+                splashElem.addEventListener('pointerdown', onFirstTouch, { once: true });
+            }
 
             // Clean, fast auto-dismiss at 1.9s
             setTimeout(() => {
