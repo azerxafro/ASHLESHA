@@ -1,5 +1,14 @@
-# https://www.robotstxt.org/robotstxt.html
+# Google SEO & Web Crawler Directives
 User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
 Allow: /
 
 Sitemap: https://ashlesha-inky.vercel.app/sitemap.xml
