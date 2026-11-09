@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+Sitemap: https://ashlesha-inky.vercel.app/sitemap.xml
+Host: https://ashlesha-inky.vercel.app

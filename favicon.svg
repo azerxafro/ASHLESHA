@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="30" fill="#08090b" stroke="#f3dbc7" stroke-width="2"/>
+  <text x="32" y="38" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="700" fill="#f5eee6" text-anchor="middle">AP</text>
+  <circle cx="48" cy="20" r="3" fill="#34d399"/>
+</svg>

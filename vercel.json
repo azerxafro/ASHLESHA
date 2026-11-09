@@ -1,8 +1,29 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/", "destination": "/index.html" },
     { "source": "/ash", "destination": "/index.html" },
     { "source": "/ash.html", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    },
+    {
+      "source": "/(profile.jpg|og-image.jpg|apple-touch-icon.png|favicon.svg)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(robots.txt|sitemap.xml)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate" }
+      ]
+    }
   ]
 }
