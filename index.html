@@ -244,6 +244,17 @@
                 radial-gradient(circle at 15% 70%, rgba(52, 211, 153, 0.03) 0%, transparent 40%);
         }
 
+        
+        /* F1 Racing Red & Gantry Lights */
+        .f1-red-glow {
+            background-color: #e10600 !important;
+            box-shadow: 0 0 20px #e10600, 0 0 45px rgba(225, 6, 0, 0.85) !important;
+            border-color: #ff4d4d !important;
+        }
+        .f1-skew {
+            transform: skewX(-8deg);
+        }
+
         /* Patrick David Editorial Hairline Cards */
         .pd-card {
             background: rgba(13, 15, 19, 0.72);
@@ -360,6 +371,126 @@
     </style>
 </head>
 <body class="bg-void text-bone font-sans antialiased selection:bg-champagne selection:text-void min-h-screen flex flex-col ambient-glow">
+
+    <!-- ==================== F1 RACING THEMED SPLASH SCREEN ==================== -->
+    <aside id="f1-splash" aria-label="F1 Racing Intro" onclick="dismissF1Splash()" class="fixed inset-0 z-[9999] bg-black flex flex-col items-center justify-between p-6 sm:p-12 overflow-hidden select-none cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.85,0,0.15,1)]">
+        <!-- Carbon fiber tarmac background -->
+        <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(rgba(245, 238, 230, 0.15) 1px, transparent 1px), repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.02) 2px, transparent 2px, transparent 4px); background-size: 24px 24px, 100% 4px;"></div>
+        
+        <!-- Top Telemetry Bar -->
+        <div class="w-full max-w-5xl flex items-center justify-between text-[11px] font-mono text-bone/50 tracking-widest relative z-10 border-b border-white/[0.08] pb-4" onclick="event.stopPropagation()">
+            <div class="flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-[#e10600] animate-pulse"></span>
+                <span class="text-[#e10600] font-bold tracking-wider">FIA FORMULA 1® // TELEMETRY</span>
+                <span class="hidden sm:inline text-white/30">•</span>
+                <span class="hidden sm:inline text-bone/60">SECTOR 1 ACTIVE</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="hidden md:inline text-bone/40">DRS: <strong class="text-tech-emerald">ENABLED</strong></span>
+                <span class="hidden md:inline text-bone/40">ERS: <strong class="text-champagne">100%</strong></span>
+                <button type="button" onclick="dismissF1Splash()" class="px-3.5 py-1.5 rounded-full border border-white/20 hover:border-white/50 text-[10px] font-mono text-bone/70 hover:text-white transition-all bg-white/[0.04]">
+                    SKIP <span class="text-white/40">[ESC]</span> &rarr;
+                </button>
+            </div>
+        </div>
+
+        <!-- Center Stage: F1 Gantry Lights + "ASHLESHA" -->
+        <div class="flex flex-col items-center text-center my-auto py-6 relative z-10 max-w-4xl w-full">
+            
+            <!-- 5-Light Starting Gantry -->
+            <div class="mb-6 p-3 sm:p-4 rounded-2xl bg-black/80 border border-white/10 shadow-2xl backdrop-blur-md">
+                <div class="text-[9px] font-mono text-bone/40 uppercase tracking-[0.3em] mb-2.5 text-center">Starting Grid • Revs Building</div>
+                <div class="flex items-center gap-2.5 sm:gap-4">
+                    <!-- Light Pod 1 -->
+                    <div class="flex flex-col gap-1.5 p-2 rounded-xl bg-white/[0.03] border border-white/[0.06]">
+                        <div class="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-neutral-900 border border-white/10 transition-all duration-150" id="f1-light-1"></div>
+                        <div class="w-7 h-1.5 sm:w-9 sm:h-2 rounded-full bg-neutral-800"></div>
+                    </div>
+                    <!-- Light Pod 2 -->
+                    <div class="flex flex-col gap-1.5 p-2 rounded-xl bg-white/[0.03] border border-white/[0.06]">
+                        <div class="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-neutral-900 border border-white/10 transition-all duration-150" id="f1-light-2"></div>
+                        <div class="w-7 h-1.5 sm:w-9 sm:h-2 rounded-full bg-neutral-800"></div>
+                    </div>
+                    <!-- Light Pod 3 -->
+                    <div class="flex flex-col gap-1.5 p-2 rounded-xl bg-white/[0.03] border border-white/[0.06]">
+                        <div class="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-neutral-900 border border-white/10 transition-all duration-150" id="f1-light-3"></div>
+                        <div class="w-7 h-1.5 sm:w-9 sm:h-2 rounded-full bg-neutral-800"></div>
+                    </div>
+                    <!-- Light Pod 4 -->
+                    <div class="flex flex-col gap-1.5 p-2 rounded-xl bg-white/[0.03] border border-white/[0.06]">
+                        <div class="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-neutral-900 border border-white/10 transition-all duration-150" id="f1-light-4"></div>
+                        <div class="w-7 h-1.5 sm:w-9 sm:h-2 rounded-full bg-neutral-800"></div>
+                    </div>
+                    <!-- Light Pod 5 -->
+                    <div class="flex flex-col gap-1.5 p-2 rounded-xl bg-white/[0.03] border border-white/[0.06]">
+                        <div class="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-neutral-900 border border-white/10 transition-all duration-150" id="f1-light-5"></div>
+                        <div class="w-7 h-1.5 sm:w-9 sm:h-2 rounded-full bg-neutral-800"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- F1 Title: ASHLESHA -->
+            <div class="relative group my-2">
+                <div class="absolute -inset-6 bg-gradient-to-r from-[#e10600]/30 via-champagne/15 to-transparent blur-3xl opacity-70 pointer-events-none"></div>
+                <div class="font-display text-6xl sm:text-8xl md:text-9xl font-black italic tracking-tighter text-bone uppercase drop-shadow-[0_12px_40px_rgba(225,6,0,0.4)] f1-skew">
+                    ASHLESHA
+                </div>
+            </div>
+
+            <!-- Racing Kerb Accent Line -->
+            <div class="w-48 sm:w-72 h-1.5 rounded-full my-4 overflow-hidden shadow-lg shadow-[#e10600]/30" style="background: repeating-linear-gradient(45deg, #e10600 0, #e10600 12px, #ffffff 12px, #ffffff 24px);"></div>
+
+            <!-- Role & Subtitle -->
+            <div class="font-mono text-xs sm:text-sm text-champagne tracking-[0.25em] uppercase font-bold mt-1">
+                P1 // POLE POSITION • ELECTRONICS & HARDWARE ENGINEER
+            </div>
+            <div class="text-[11px] font-mono text-bone/50 tracking-widest mt-1">
+                CIRCUIT // EMBEDDED SYSTEMS • FPGA • EDGE AI
+            </div>
+
+            <!-- Dynamic Shift Lights & RPM Meter -->
+            <div class="mt-6 w-full max-w-sm bg-black/60 p-3.5 rounded-xl border border-white/[0.08]">
+                <div class="flex items-center justify-between text-[10px] font-mono text-bone/60 mb-2">
+                    <span id="f1-gear" class="font-bold text-bone">GEAR 1</span>
+                    <span id="f1-status" class="text-champagne font-bold">GRID FORMATION</span>
+                    <span id="f1-rpm">12,500 RPM</span>
+                </div>
+                <!-- 15 LED Shift Segments -->
+                <div class="flex gap-1 h-2" id="f1-shift-lights">
+                    <div class="flex-1 rounded-sm bg-neutral-800 transition-colors" id="shift-1"></div>
+                    <div class="flex-1 rounded-sm bg-neutral-800 transition-colors" id="shift-2"></div>
+                    <div class="flex-1 rounded-sm bg-neutral-800 transition-colors" id="shift-3"></div>
+                    <div class="flex-1 rounded-sm bg-neutral-800 transition-colors" id="shift-4"></div>
+                    <div class="flex-1 rounded-sm bg-neutral-800 transition-colors" id="shift-5"></div>
+                    <div class="flex-1 rounded-sm bg-neutral-800 transition-colors" id="shift-6"></div>
+                    <div class="flex-1 rounded-sm bg-neutral-800 transition-colors" id="shift-7"></div>
+                    <div class="flex-1 rounded-sm bg-neutral-800 transition-colors" id="shift-8"></div>
+                    <div class="flex-1 rounded-sm bg-neutral-800 transition-colors" id="shift-9"></div>
+                    <div class="flex-1 rounded-sm bg-neutral-800 transition-colors" id="shift-10"></div>
+                    <div class="flex-1 rounded-sm bg-neutral-800 transition-colors" id="shift-11"></div>
+                    <div class="flex-1 rounded-sm bg-neutral-800 transition-colors" id="shift-12"></div>
+                    <div class="flex-1 rounded-sm bg-neutral-800 transition-colors" id="shift-13"></div>
+                    <div class="flex-1 rounded-sm bg-neutral-800 transition-colors" id="shift-14"></div>
+                    <div class="flex-1 rounded-sm bg-neutral-800 transition-colors" id="shift-15"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Status Bar -->
+        <div class="w-full max-w-5xl flex flex-col sm:flex-row items-center justify-between text-[10px] font-mono text-bone/40 border-t border-white/[0.08] pt-4 gap-2 relative z-10">
+            <div>
+                ENGINE TELEMETRY: <span class="text-bone/70">NOMINAL</span> • TYRE TEMP: <span class="text-bone/70">102°C</span>
+            </div>
+            <div class="text-[#e10600] font-bold tracking-widest" id="f1-action-text">
+                REVS BUILDING...
+            </div>
+            <div>
+                CLICK ANYWHERE OR PRESS ESC TO LAUNCH
+            </div>
+        </div>
+    </aside>
+
 
     <!-- Scroll Progress Indicator -->
     <div id="scroll-progress" aria-hidden="true"></div>
@@ -1319,6 +1450,7 @@
                 lucide.createIcons();
             }
             initScrollReveal();
+            initF1Splash();
         });
 
         // Buttery Smooth Intersection Observer for Scroll Reveals
@@ -1478,6 +1610,129 @@ ${message}`);
                 submitBtn.innerHTML = originalBtnHtml;
                 if (window.lucide) lucide.createIcons();
             }
+        }
+
+        
+        // ==================== F1 RACING SPLASH SCREEN CONTROLLER ====================
+        let f1Dismissed = false;
+
+        function playF1Beep(freq = 440, duration = 0.08) {
+            try {
+                const ctx = window.f1AudioCtx || (window.f1AudioCtx = new (window.AudioContext || window.webkitAudioContext)());
+                if (ctx.state === 'suspended') ctx.resume();
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(freq, ctx.currentTime);
+                gain.gain.setValueAtTime(0.06, ctx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.start();
+                osc.stop(ctx.currentTime + duration);
+            } catch (e) {}
+        }
+
+        function playF1LaunchSound() {
+            try {
+                const ctx = window.f1AudioCtx || (window.f1AudioCtx = new (window.AudioContext || window.webkitAudioContext)());
+                if (ctx.state === 'suspended') ctx.resume();
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(140, ctx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(480, ctx.currentTime + 0.4);
+                gain.gain.setValueAtTime(0.12, ctx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.5);
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.start();
+                osc.stop(ctx.currentTime + 0.5);
+            } catch (e) {}
+        }
+
+        function dismissF1Splash() {
+            if (f1Dismissed) return;
+            f1Dismissed = true;
+            try { document.body.style.overflow = ''; } catch(e) {}
+            const splash = document.getElementById('f1-splash');
+            if (splash) {
+                splash.style.transform = 'translateY(-100%)';
+                splash.style.opacity = '0';
+                splash.style.pointerEvents = 'none';
+                setTimeout(() => {
+                    splash.style.display = 'none';
+                }, 750);
+            }
+        }
+
+        function initF1Splash() {
+            try { document.body.style.overflow = 'hidden'; } catch(e) {}
+            const lights = [
+                document.getElementById('f1-light-1'),
+                document.getElementById('f1-light-2'),
+                document.getElementById('f1-light-3'),
+                document.getElementById('f1-light-4'),
+                document.getElementById('f1-light-5')
+            ];
+
+            const shiftLeds = Array.from({ length: 15 }, (_, i) => document.getElementById(`shift-${i + 1}`));
+            const statusElem = document.getElementById('f1-status');
+            const actionText = document.getElementById('f1-action-text');
+            const gearElem = document.getElementById('f1-gear');
+
+            // Listen for ESC or Spacebar to skip
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' || e.code === 'Space') {
+                    dismissF1Splash();
+                }
+            });
+
+            // Sequence timing
+            const stepTimes = [300, 600, 900, 1200, 1500];
+
+            stepTimes.forEach((time, index) => {
+                setTimeout(() => {
+                    if (f1Dismissed) return;
+                    if (lights[index]) lights[index].classList.add('f1-red-glow');
+                    playF1Beep(440 + index * 60, 0.08);
+
+                    // Light up shift LEDs (3 per light step)
+                    for (let s = index * 3; s < (index + 1) * 3; s++) {
+                        if (shiftLeds[s]) {
+                            if (s < 5) shiftLeds[s].style.backgroundColor = '#10b981'; // Green
+                            else if (s < 10) shiftLeds[s].style.backgroundColor = '#e10600'; // Red
+                            else shiftLeds[s].style.backgroundColor = '#38bdf8'; // Blue
+                            shiftLeds[s].style.boxShadow = '0 0 8px currentColor';
+                        }
+                    }
+
+                    if (gearElem) gearElem.textContent = `GEAR ${index + 1}`;
+                    if (statusElem) statusElem.textContent = `REV CLIMB // STAGE ${index + 1}`;
+                }, time);
+            });
+
+            // Lights Out! (at 2100ms)
+            setTimeout(() => {
+                if (f1Dismissed) return;
+                lights.forEach(l => { if (l) l.classList.remove('f1-red-glow'); });
+                if (actionText) {
+                    actionText.textContent = 'LIGHTS OUT AND AWAY WE GO!';
+                    actionText.classList.remove('text-[#e10600]');
+                    actionText.classList.add('text-tech-emerald', 'font-black', 'tracking-wider');
+                }
+                if (statusElem) {
+                    statusElem.textContent = 'RACE START // MAX POWER';
+                    statusElem.classList.add('text-tech-emerald');
+                }
+                if (gearElem) gearElem.textContent = 'GEAR 8';
+                playF1LaunchSound();
+            }, 2100);
+
+            // Auto-dismiss and reveal site (at 3000ms)
+            setTimeout(() => {
+                dismissF1Splash();
+            }, 3000);
         }
 
         // Quick FSM Simulator for 1011 Sequence Detector
