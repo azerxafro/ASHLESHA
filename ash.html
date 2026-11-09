@@ -256,27 +256,27 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: f1SpeedSnap 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards, f1TextShine 1.8s ease-in-out infinite;
-            filter: drop-shadow(0 0 25px rgba(225, 6, 0, 0.55)) drop-shadow(0 0 65px rgba(255, 199, 0, 0.35));
+            filter: drop-shadow(0 0 20px rgba(225, 6, 0, 0.55)) drop-shadow(0 0 45px rgba(255, 199, 0, 0.3));
             will-change: transform, opacity, filter;
         }
 
         @keyframes f1SpeedSnap {
             0% {
                 opacity: 0;
-                transform: scale(0.72) skewX(-22deg) translateX(-60px);
-                letter-spacing: -0.08em;
-                filter: blur(10px) drop-shadow(0 0 0px transparent);
+                transform: scale(0.8) skewX(-18deg) translateX(-20px);
+                letter-spacing: -0.06em;
+                filter: blur(8px) drop-shadow(0 0 0px transparent);
             }
             60% {
                 opacity: 1;
-                transform: scale(1.04) skewX(-10deg) translateX(4px);
-                filter: blur(0px) drop-shadow(0 0 45px rgba(225, 6, 0, 0.85)) drop-shadow(0 0 85px rgba(255, 199, 0, 0.6));
+                transform: scale(1.03) skewX(-10deg) translateX(2px);
+                filter: blur(0px) drop-shadow(0 0 35px rgba(225, 6, 0, 0.8)) drop-shadow(0 0 70px rgba(255, 199, 0, 0.5));
             }
             100% {
                 opacity: 1;
                 transform: scale(1) skewX(-12deg) translateX(0);
-                letter-spacing: -0.05em;
-                filter: blur(0px) drop-shadow(0 0 30px rgba(225, 6, 0, 0.6)) drop-shadow(0 0 65px rgba(255, 199, 0, 0.35));
+                letter-spacing: -0.04em;
+                filter: blur(0px) drop-shadow(0 0 25px rgba(225, 6, 0, 0.55)) drop-shadow(0 0 50px rgba(255, 199, 0, 0.3));
             }
         }
 
@@ -288,10 +288,10 @@
 
         .f1-racing-kerb {
             width: 0%;
-            height: 3px;
+            height: 2.5px;
             border-radius: 9999px;
             background: linear-gradient(90deg, #e10600 0%, #ffc700 55%, #00f0ff 100%);
-            box-shadow: 0 0 16px rgba(225, 6, 0, 0.85), 0 0 30px rgba(255, 199, 0, 0.65);
+            box-shadow: 0 0 14px rgba(225, 6, 0, 0.85), 0 0 24px rgba(255, 199, 0, 0.6);
             animation: f1KerbExpand 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
             will-change: width, opacity;
         }
@@ -302,7 +302,7 @@
                 opacity: 0;
             }
             100% {
-                width: min(280px, 65vw);
+                width: min(200px, 45vw);
                 opacity: 1;
             }
         }
@@ -457,15 +457,15 @@
             <div class="f1-track-streak absolute w-[140vw] h-1 bg-gradient-to-r from-transparent via-[#ffc700] to-transparent blur-[1px] pointer-events-none"></div>
         </div>
 
-        <!-- Centerpiece: ONLY THE TEXT "ASHLESHA" -->
-        <div class="relative z-10 flex flex-col items-center justify-center text-center px-4 w-full max-w-5xl">
-            <div class="relative inline-block">
-                <h1 class="f1-race-text font-display font-black italic tracking-tighter uppercase text-6xl xs:text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] leading-none select-none">
+        <!-- Centerpiece: ONLY THE TEXT "ASHLESHA" (Refined Size & Mobile Optimized) -->
+        <div class="relative z-10 flex flex-col items-center justify-center text-center px-4 w-full max-w-4xl">
+            <div class="relative inline-block max-w-[88vw]">
+                <h1 class="f1-race-text font-display font-black italic tracking-tight sm:tracking-tighter uppercase text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none select-none whitespace-nowrap">
                     ASHLESHA
                 </h1>
             </div>
             <!-- Thin aerodynamic racing stripe directly underneath -->
-            <div class="f1-racing-kerb mt-4 sm:mt-6" aria-hidden="true"></div>
+            <div class="f1-racing-kerb mt-3 sm:mt-5" aria-hidden="true"></div>
         </div>
 
         <!-- Discreet Skip Button -->
